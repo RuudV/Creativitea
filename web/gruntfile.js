@@ -17,9 +17,11 @@ module.exports = function (grunt) {
       dev: ['dev/'],
       build: ["build/"],
       build_assets: [
+        // clean js and less
         'build/_assets/js/*.js',
-        '!build/_assets/js/*.min.js',
-        'build/_assets/less'
+        'build/_assets/less',
+        // exclude minified js
+        '!build/_assets/js/*.min.js'
       ]
     },
 
@@ -55,14 +57,23 @@ module.exports = function (grunt) {
     Uglify and generate sourcemaps for javascripts
     */
     uglify: {
-      build: {
+      dev: {
         options: {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */',
           sourceMap: true,
           mangle: {},
           compress: true
         },
-        src: 'build/_assets/js/*.js',
+        src: 'dev/_assets/js/*.js',
+        dest: 'dev/_assets/js/main.min.js'
+      },
+      build: {
+        options: {
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */',
+          mangle: {},
+          compress: true
+        },
+        src: 'build/_assets/js/*js',
         dest: 'build/_assets/js/main.min.js'
       }
     },
@@ -71,6 +82,14 @@ module.exports = function (grunt) {
     Generate minified css from less files
     */
     less: {
+      dev: {
+        options: {
+          paths: ["dev/_assets/css"]
+        },
+        files: {
+          "dev/_assets/css/styles.min.css": "dev/_assets/less/*.less"
+        }
+      },
       build: {
         options: {
           paths: ["build/_assets/css"]
@@ -85,6 +104,14 @@ module.exports = function (grunt) {
     Process html files for script tags, templates, less links etc...
     */
     processhtml: {
+      dev: {
+        files: [{
+          expand: true,
+          src: '**/*.html',
+          dest: 'dev/',
+          cwd: 'dev/'
+        }]
+      },
       build: {
         files: [{
           expand: true,
@@ -102,6 +129,11 @@ module.exports = function (grunt) {
       options: {
         reset: true,
         reportpath: false
+      },
+      dev: {
+        files: {
+          src: ['dev/**/*.html', '!dev/_assets/includes/*.html']
+        }
       },
       build: {
         files: {
@@ -147,7 +179,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-uncss');
-
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   /*
   Declare tasks
@@ -157,7 +189,13 @@ module.exports = function (grunt) {
   // TODO: grunt.registerTask('default') - Let default grunt task run a build and dev build
   grunt.registerTask('default', [
     'clean',
-    'copy'
+    'copy',
+    'uglify',
+    'less',
+    'processhtml',
+    'validation',
+    'uncss',
+    'cssmin'
   ]);
 
   // Check js task //cmd: grunt checkjs
@@ -169,7 +207,11 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'jshint',
     'clean:dev',
-    'copy:dev'
+    'copy:dev',
+    'uglify:dev',
+    'less:dev',
+    'processhtml:dev',
+    'validation:dev'
   ]);
 
   // Build task //cmd: grunt build
