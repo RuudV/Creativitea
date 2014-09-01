@@ -22,7 +22,10 @@ module.exports = function (grunt) {
         'build/_assets/less',
         // exclude minified js
         '!build/_assets/js/*.min.js'
-      ]
+      ],
+      watchJs: ['dev/_assets/js'],
+      watchLess: ['dev/_assets/less'],
+      watchHtml: ['dev/**/*.html']
     },
 
 
@@ -40,6 +43,20 @@ module.exports = function (grunt) {
         cwd: 'src',
         src: [ '**' ],
         dest: 'build',
+        expand: true
+      },
+      watchJs: {
+        src: 'src/_assets/js/*.js',
+        dest: 'dev/_assets/js/*.js'
+      },
+      watchLess: {
+        src: 'src/_assets/less/*.less',
+        dest: 'dev/_assets/less/*.less'
+      },
+      watchHtml: {
+        cwd: 'src',
+        src: ['**/*.html'],
+        dest: 'dev',
         expand: true
       }
     },
@@ -162,6 +179,37 @@ module.exports = function (grunt) {
           'build/_assets/css/main.min.css': ['build/_assets/css/main.min.css']
         }
       }
+    },
+
+    /*
+    Watch files for specific grunt tasks
+    */
+    watch: {
+      watchJs: {
+        files: ['src/_assets/js/*.js'],
+        tasks: [
+          'clean:watchJs',
+          'copy:watchJs',
+          'uglify:dev'
+        ]
+      },
+      watchLess: {
+        files: ['src/_assets/less/*.less'],
+        tasks: [
+          'clean:watchLess',
+          'copy:watchLess',
+          'less:dev'
+        ]
+      },
+      watchHtml: {
+        files: ['src/**/*.html'],
+        tasks: [
+          'clean:watchHtml',
+          'copy:watchHtml',
+          'processhtml:dev',
+          'validation:dev'
+        ]
+      }
     }
   });
 
@@ -188,8 +236,8 @@ module.exports = function (grunt) {
   // NOTE: grunt.registerTask('default') - Don't use this atm, not ready
   // TODO: grunt.registerTask('default') - Let default grunt task run a build and dev build
   grunt.registerTask('default', [
-    'clean',
-    'copy',
+    'clean:dev', 'clean:build',
+    'copy:dev', 'copy:build',
     'uglify',
     'less',
     'processhtml',
