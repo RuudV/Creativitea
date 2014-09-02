@@ -15,13 +15,13 @@
 		<string>AvenirNext-Bold</string>
 		<string>AvenirNext-Regular</string>
 		<string>AvenirNext-Medium</string>
-		<string>OpenSans-CondensedBold</string>
-		<string>Lato-Light</string>
 		<string>Lato-Regular</string>
+		<string>Lato-Light</string>
+		<string>OpenSans-CondensedBold</string>
 		<string>Palatino-Italic</string>
 	</array>
 	<key>length</key>
-	<integer>5247935</integer>
+	<integer>5139918</integer>
 	<key>version</key>
 	<integer>37</integer>
 </dict>
