@@ -46,12 +46,16 @@ module.exports = function (grunt) {
         expand: true
       },
       watchJs: {
-        src: 'src/_assets/js/*.js',
-        dest: 'dev/_assets/js/*.js'
+        cwd: 'src',
+        src: [ '**/*.js' ],
+        dest: 'dev',
+        expand: true
       },
       watchLess: {
-        src: 'src/_assets/less/*.less',
-        dest: 'dev/_assets/less/*.less'
+        cwd: 'src',
+        src: [ '**/*.less' ],
+        dest: 'dev',
+        expand: true
       },
       watchHtml: {
         cwd: 'src',
@@ -104,7 +108,7 @@ module.exports = function (grunt) {
           paths: ["dev/_assets/css"]
         },
         files: {
-          "dev/_assets/css/styles.min.css": "dev/_assets/less/*.less"
+          "dev/_assets/css/styles.min.css": "dev/_assets/less/styles.less"
         }
       },
       build: {
@@ -112,7 +116,7 @@ module.exports = function (grunt) {
           paths: ["build/_assets/css"]
         },
         files: {
-          "build/_assets/css/styles.min.css": "build/_assets/less/*.less"
+          "build/_assets/css/styles.min.css": "build/_assets/less/styles.less"
         }
       }
     },
@@ -165,7 +169,7 @@ module.exports = function (grunt) {
     uncss: {
       build: {
         files: {
-          'build/_assets/css/main.min.css': ['build/*.html']
+          'build/_assets/css/styles.min.css': ['build/*.html']
         }
       }
     },
@@ -176,7 +180,7 @@ module.exports = function (grunt) {
     cssmin: {
       build: {
         files: {
-          'build/_assets/css/main.min.css': ['build/_assets/css/main.min.css']
+          'build/_assets/css/styles.min.css': ['build/_assets/css/styles.min.css']
         }
       }
     },

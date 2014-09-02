@@ -1,11 +1,1 @@
-body {
-  background: #efefef;
-}
-header h1 {
-  color: purple;
-}
-#whatever {
-  display: block;
-  color: red;
-  background: purple;
-}
+body,html{margin:0;padding:0}button,h1,li,p,ul{margin:0;padding:0;border:0;font-weight:400;font-style:normal;font-size:100%;line-height:1;font-family:inherit}ul{list-style:none}html{overflow-y:scroll;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}footer,header,nav{display:block}button{font-size:100%;margin:0;vertical-align:baseline;line-height:normal}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}button{cursor:pointer;-webkit-appearance:button}.btn{border-radius:18px;background:#D8D8D8;font-family:Lato-Regular;font-size:16px;color:#3C3C3C;line-height:20px;padding:8px 20px;letter-spacing:1px}
