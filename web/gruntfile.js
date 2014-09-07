@@ -1,7 +1,10 @@
-/*global module*/
+/*global module, require*/
 
 module.exports = function (grunt) {
   "use strict";
+
+  // Disply time of the tasks executed
+  require('time-grunt')(grunt);
 
   // Project configuration.
   grunt.initConfig({

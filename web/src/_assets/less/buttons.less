@@ -1,10 +1,65 @@
+// Buttons
+//
+// A generic button, used in forms or generic actions.
+// 
+// Markup:
+// <a href="#" class="btn {$modifiers}">Link Button</a>
+// <button class="btn {$modifiers}">Button Element</button>
+//
+// .btn-primary   - Indicate that this button implies the main action on that page.
+// :hover         - Darken, to indicate a hover.
+// :active        - Brighten up, to indicate the buttons active state.
+// :disabled      - For when a button doesn't want to be clicked.
+//
+// Styleguide 1.1
 .btn {
-  border-radius: 18px;
-  background: #D8D8D8;
-  font-family: Lato-Regular;
+  @color: hsla(0,0,24%,1);
+  @backgroundColor: hsla(0,0,94%,1);
+  
+  font-family: Lato;
   font-size: 16px;
-  color: #3C3C3C;
+  font-weight: regular;
+  color: @color;
   line-height: 20px;
-  padding: 8px 20px;
   letter-spacing: 1px;
+  border-radius: 18px;
+  padding: 8px 35px;
+  background: @backgroundColor;
+  text-decoration: none;
+
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  &:visited, &:hover {
+    color: @color;
+  }
+  &:hover {
+    background: darken(@backgroundColor, 5%);
+  }
+  &:active {
+    color: #fff;
+    background: darken(@backgroundColor, 50%);
+  }
+  &:disabled,
+  &.disabled {
+    opacity: .7;
+  }
+
+  &.btn-primary {
+    @color: hsla(0,0,100%,1);
+    @backgroundColor: hsla(37, 91%, 55%,1);
+    
+    color: @color;
+    background: @backgroundColor;
+    &:hover {
+      background: lighten(@backgroundColor, 20%);
+    }
+    &:active {
+      background: darken(@backgroundColor, 10%);
+    }
+    &:disabled,
+    &.disabled {
+      opacity: .4;
+    }
+  }
 }
+

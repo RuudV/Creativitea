@@ -169,12 +169,45 @@ textarea {
   vertical-align: top;
 }
 .btn {
-  border-radius: 18px;
-  background: #D8D8D8;
-  font-family: Lato-Regular;
+  font-family: Lato;
   font-size: 16px;
-  color: #3C3C3C;
+  font-weight: regular;
+  color: #3d3d3d;
   line-height: 20px;
-  padding: 8px 20px;
   letter-spacing: 1px;
+  border-radius: 18px;
+  padding: 8px 35px;
+  background: #f0f0f0;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn:visited,
+.btn:hover {
+  color: #3d3d3d;
+}
+.btn:hover {
+  background: #e3e3e3;
+}
+.btn:active {
+  color: #fff;
+  background: #707070;
+}
+.btn:disabled,
+.btn.disabled {
+  opacity: .7;
+}
+.btn.btn-primary {
+  color: #ffffff;
+  background: #f5a524;
+}
+.btn.btn-primary:hover {
+  background: #f9cd85;
+}
+.btn.btn-primary:active {
+  background: #db8b0a;
+}
+.btn.btn-primary:disabled,
+.btn.btn-primary.disabled {
+  opacity: .4;
 }

@@ -1,10 +1,59 @@
-.btn {
-  border-radius: 18px;
-  background: #D8D8D8;
-  font-family: Lato-Regular;
+// A generic button, used in forms or generic actions.
+//
+// :hover             - Darken, to indicate a hover.
+// :active            - Brighten up, to indicate the buttons active state.
+// :disabled          - For when a button doesn't want to be clicked.
+//
+// Styleguide 1.
+a.btn,
+button.btn {
+  font-family: Lato;
   font-size: 16px;
+  font-weight: regular;
   color: #3C3C3C;
   line-height: 20px;
-  padding: 8px 20px;
   letter-spacing: 1px;
+  border-radius: 18px;
+  padding: 8px 35px;
+  background: #EFEFEF;
+  
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  &:hover {
+    background: #D8D8D8;
+  }
+  &:active {
+    background: #979797;
+  }
+  &:disabled,
+  &.disabled {
+    opacity: .7;
+  }
+}
+
+// An call to action button, used in forms or generic actions.
+//
+// :hover             - Darken, to indicate a hover.
+// :active            - Brighten up, to indicate the buttons active state.
+// :disabled          - For when a button doesn't want to be clicked.
+//
+// Styleguide 1.0.1
+
+a.btn.btn-action,
+button.btn.btn-action {
+  color: #FFF;
+  background: #F5A623;
+  
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  &:hover {
+    background: #CC8613;
+  }
+  &:active {
+    background: #956008;
+  }
+  &:disabled,
+  &.disabled {
+    opacity: .4;
+  }
 }
