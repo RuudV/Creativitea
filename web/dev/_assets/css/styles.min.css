@@ -171,23 +171,25 @@ textarea {
 .btn {
   font-family: Lato;
   font-size: 16px;
-  font-weight: regular;
-  color: #3d3d3d;
+  font-weight: 400;
+  color: #969696;
   line-height: 20px;
   letter-spacing: 1px;
+  border: none;
   border-radius: 18px;
   padding: 8px 35px;
-  background: #f0f0f0;
+  background: #efefef;
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-font-smoothing: antialiased;
 }
 .btn:visited,
 .btn:hover {
-  color: #3d3d3d;
+  color: #969696;
 }
 .btn:hover {
-  background: #e3e3e3;
+  background: #e2e2e2;
 }
 .btn:active {
   color: #fff;
@@ -199,13 +201,18 @@ textarea {
 }
 .btn.btn-primary {
   color: #ffffff;
-  background: #f5a524;
+  background: #f5a623;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:visited {
+  color: #fff;
 }
 .btn.btn-primary:hover {
   background: #f9cd85;
 }
 .btn.btn-primary:active {
-  background: #db8b0a;
+  background: #db8c0a;
 }
 .btn.btn-primary:disabled,
 .btn.btn-primary.disabled {

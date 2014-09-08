@@ -1,156 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>kss-node Styleguide</title>
-    <meta name="description" content="" />
-    <meta name="generator" content="kss-node" />
-    <link rel="stylesheet" href="public/kss.css" />
-    <link rel="stylesheet" href="public/style.css" />
-    <!--[if lt IE 9]>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Styleguide Example</title>
+  <link rel="stylesheet" href="public/kss.css" type="text/css" />
+  <link rel="stylesheet" href="public/style.css" type="text/css" />
+  <!--[if lt IE 9]>
     <script src="public/html5shiv.js"></script>
-    <![endif]-->
-  </head>
-  <body id="kss-node">
-    <div class="kss-wrapper">
-      <div class="kss-sidebar">
-        <div class="kss-sidebar-inner">
-          <header class="kss-header">
-            <h1 class="kss-doc-title"><a href="./">kss-node Styleguide</a></h1>
-          </header>
-          <nav class="kss-nav">
-            <ul class="kss-menu" data-kss-ref="1">
-              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
-              
-              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Modules</span></a></li>
-              
-            </ul>
-            
-            <ul class="kss-menu-child">
-              
-              
-              
-              
-              
-              <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span><span class="kss-name">Buttons</span></a></li>
-              
-              
-            </ul>
-            
-          </nav>
-        </div>
-      </div>
-      <div class="kss-content">
-        <article class="kss-article">
-          
-          
-          <section id="section-1" class="kss-section kss-depth-1">
-            <h1 class="kss-title"><span class="kss-ref">1</span> Modules</h1>
-            
-            
-            <div class="kss-description">
-              <p>Reusable elements that can be used across the site.
+  <![endif]-->
+</head>
+<body id="styleguide">
+  <header class="styleguide-header styleguide-reset">
+    <div class="styleguide-container">
+      <h1>Styleguide</h1>
+    </div>
+  </header>
+  <div class="styleguide-container">
+    <nav class="styleguide-menu styleguide-reset">
+       <ul class="styleguide-menu-list" data-kss-ref="1">
+        <li><a href="./">0. Overview</a></li>
+        
+        <li><a href="section-1.html">1. Modules</a></li>
+        
+      </ul>
+    </nav>
+
+    <div class="styleguide-content">
+
+      
+      
+      
+      <header class="example-header styleguide-reset">
+        <h1>Modules</h1>
+      </header>
+      
+      <div class="markdown-body styleguide-reset">
+        <p>Reusable elements that can be used across the site.
 So far this just includes buttons. </p>
 
-            </div>
-            
-            
-          </section>
-          
-          <section id="section-1.1" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">1.1</span> Buttons</h1>
-            
-            
-            <div class="kss-description">
-              <p>A generic button, used in forms or generic actions.</p>
-
-            </div>
-            
-            <div class="kss-modifier-block">
-              <div class="kss-modifier kss-modifier-original">
-                <div class="kss-modifier-example">
-                  <a href="#" class="btn {$modifiers}">Link Button</a>
-<button class="btn {$modifiers}">Button Element</button>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">.btn-primary</div>
-                  <div class="kss-modifier-description">
-                    <p>Indicate that this button implies the main action on that page.</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <a href="#" class="btn btn-primary">Link Button</a>
-<button class="btn btn-primary">Button Element</button>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">:hover</div>
-                  <div class="kss-modifier-description">
-                    <p>Darken, to indicate a hover.</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <a href="#" class="btn pseudo-class-hover">Link Button</a>
-<button class="btn pseudo-class-hover">Button Element</button>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">:active</div>
-                  <div class="kss-modifier-description">
-                    <p>Brighten up, to indicate the buttons active state.</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <a href="#" class="btn pseudo-class-active">Link Button</a>
-<button class="btn pseudo-class-active">Button Element</button>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">:disabled</div>
-                  <div class="kss-modifier-description">
-                    <p>For when a button doesn&apos;t want to be clicked.</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <a href="#" class="btn pseudo-class-disabled">Link Button</a>
-<button class="btn pseudo-class-disabled">Button Element</button>
-                </div>
-              </div>
-              
-              <div class="kss-markup">
-                <pre><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
-&lt;button class=&quot;btn {$modifiers}&quot;&gt;Button Element&lt;/button&gt;</code></pre>
-              </div>
-            </div>
-            
-          </section>
-          
-          
-        </article>
-        <footer class="kss-footer">
-          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
-        </footer>
       </div>
+      
+      
+      
+      
+      <div class="styleguide-example">
+        <header class="styleguide-example-header styleguide-reset">
+          <h3>1.1 <em>Buttons</em></h3>
+        </header>
+        
+        <div class="styleguide-description styleguide-markdown-body styleguide-reset">
+          <p>A majority of buttons in the site are built from the same base class.</p>
+
+
+          <ul class="styleguide-modifier">
+              
+              <li><strong>:hover</strong> - <p>Highlight the button when hovered.</p>
+</li>
+              
+              <li><strong>:disabled</strong> - <p>Make the button change appearance to reflect it being disabled.</p>
+</li>
+              
+              <li><strong>:active</strong> - <p>&quot;Press&quot; the button down when clicked.</p>
+</li>
+              
+              <li><strong>.btn-primary</strong> - <p>Indicate that the button is the primary feature of this form.</p>
+</li>
+              
+              <li><strong>.btn-primary:hover</strong> - <p>Indicate that the button is the primary feature of this form.</p>
+</li>
+              
+              <li><strong>.btn-primary:active</strong> - <p>Indicate that the button is the primary feature of this form.</p>
+</li>
+              
+          </ul>
+        </div>
+        
+
+        <div class="styleguide-element">
+          <a href="#" class="btn {$modifiers}">Link Button</a>
+<button class="btn {$modifiers}">Button Element</button>
+<input type="button" class="btn {$modifiers}" value="input[type='button']"/>
+        </div>
+
+        
+        <div class="styleguide-element styleguide-modifier">
+          <span class="styleguide-modifier-name">:hover</span>
+          <a href="#" class="btn pseudo-class-hover">Link Button</a>
+<button class="btn pseudo-class-hover">Button Element</button>
+<input type="button" class="btn pseudo-class-hover" value="input[type='button']"/>
+        </div>
+        
+        <div class="styleguide-element styleguide-modifier">
+          <span class="styleguide-modifier-name">:disabled</span>
+          <a href="#" class="btn pseudo-class-disabled">Link Button</a>
+<button class="btn pseudo-class-disabled">Button Element</button>
+<input type="button" class="btn pseudo-class-disabled" value="input[type='button']"/>
+        </div>
+        
+        <div class="styleguide-element styleguide-modifier">
+          <span class="styleguide-modifier-name">:active</span>
+          <a href="#" class="btn pseudo-class-active">Link Button</a>
+<button class="btn pseudo-class-active">Button Element</button>
+<input type="button" class="btn pseudo-class-active" value="input[type='button']"/>
+        </div>
+        
+        <div class="styleguide-element styleguide-modifier">
+          <span class="styleguide-modifier-name">.btn-primary</span>
+          <a href="#" class="btn btn-primary">Link Button</a>
+<button class="btn btn-primary">Button Element</button>
+<input type="button" class="btn btn-primary" value="input[type='button']"/>
+        </div>
+        
+        <div class="styleguide-element styleguide-modifier">
+          <span class="styleguide-modifier-name">.btn-primary:hover</span>
+          <a href="#" class="btn btn-primary pseudo-class-hover">Link Button</a>
+<button class="btn btn-primary pseudo-class-hover">Button Element</button>
+<input type="button" class="btn btn-primary pseudo-class-hover" value="input[type='button']"/>
+        </div>
+        
+        <div class="styleguide-element styleguide-modifier">
+          <span class="styleguide-modifier-name">.btn-primary:active</span>
+          <a href="#" class="btn btn-primary pseudo-class-active">Link Button</a>
+<button class="btn btn-primary pseudo-class-active">Button Element</button>
+<input type="button" class="btn btn-primary pseudo-class-active" value="input[type='button']"/>
+        </div>
+        
+
+        <div class="styleguide-html styleguide-reset">
+          <div class="styleguide-html-highlight">
+            <pre><code class="xml">&lt;a href=&quot;#&quot; class=&quot;btn {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
+&lt;button class=&quot;btn {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;btn {$modifiers}&quot; value=&quot;input[type=&#x27;button&#x27;]&quot;/&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+      
+      
+      
     </div>
-    <script src="public/kss.js"></script>
-    <script src="public/jquery-1.9.1.min.js"></script>
-    <!--[if gt IE 8]><!-->
-    <script src="public/rainbow.min.js"></script>
-    <!--<![endif]-->
-    <script src="public/main.js"></script>
-  </body>
+  </div>
+
+  <footer class="styleguide-footer styleguide-reset styleguide-container">
+    <p>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a>.</p>
+    <p>Designed by <a href="https://github.com/">GitHub</a> , <a href="http://warpspire.com/">Kyle Neath</a>. Adjusted by 1026</p>
+  </footer>
+  <script src="public/kss.js"></script>
+  <script src="public/highlight.pack.js"></script>
+  <script src="public/jquery-1.10.2.min.js"></script>
+  <script src="public/styleguide.js"></script>
+</body>
 </html>
+ 
