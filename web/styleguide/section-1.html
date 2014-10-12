@@ -20,7 +20,9 @@
        <ul class="styleguide-menu-list" data-kss-ref="1">
         <li><a href="./">0. Overview</a></li>
         
-        <li><a href="section-1.html">1. Modules</a></li>
+        <li><a href="section-1.html">1. Core Modules</a></li>
+        
+        <li><a href="section-2.html">2. Modules</a></li>
         
       </ul>
     </nav>
@@ -31,12 +33,11 @@
       
       
       <header class="example-header styleguide-reset">
-        <h1>Modules</h1>
+        <h1>Core Modules</h1>
       </header>
       
       <div class="markdown-body styleguide-reset">
-        <p>Reusable elements that can be used across the site.
-So far this just includes buttons. </p>
+        <p>Modules that are almost always present on any page on the website.</p>
 
       </div>
       
@@ -45,92 +46,58 @@ So far this just includes buttons. </p>
       
       <div class="styleguide-example">
         <header class="styleguide-example-header styleguide-reset">
-          <h3>1.1 <em>Buttons</em></h3>
+          <h3>1.1 <em>Header</em></h3>
         </header>
         
         <div class="styleguide-description styleguide-markdown-body styleguide-reset">
-          <p>A majority of buttons in the site are built from the same base class.</p>
+          <p>The header reserves the space for the menu and the website&apos;s logo.</p>
 
 
           <ul class="styleguide-modifier">
-              
-              <li><strong>:hover</strong> - <p>Highlight the button when hovered.</p>
-</li>
-              
-              <li><strong>:disabled</strong> - <p>Make the button change appearance to reflect it being disabled.</p>
-</li>
-              
-              <li><strong>:active</strong> - <p>&quot;Press&quot; the button down when clicked.</p>
-</li>
-              
-              <li><strong>.btn-primary</strong> - <p>Indicate that the button is the primary feature of this form.</p>
-</li>
-              
-              <li><strong>.btn-primary:hover</strong> - <p>Indicate that the button is the primary feature of this form.</p>
-</li>
-              
-              <li><strong>.btn-primary:active</strong> - <p>Indicate that the button is the primary feature of this form.</p>
-</li>
               
           </ul>
         </div>
         
 
         <div class="styleguide-element">
-          <a href="#" class="btn {$modifiers}">Link Button</a>
-<button class="btn {$modifiers}">Button Element</button>
-<input type="button" class="btn {$modifiers}" value="input[type='button']"/>
+          <header class="site-header {$modifiers}"></header>
         </div>
 
-        
-        <div class="styleguide-element styleguide-modifier">
-          <span class="styleguide-modifier-name">:hover</span>
-          <a href="#" class="btn pseudo-class-hover">Link Button</a>
-<button class="btn pseudo-class-hover">Button Element</button>
-<input type="button" class="btn pseudo-class-hover" value="input[type='button']"/>
-        </div>
-        
-        <div class="styleguide-element styleguide-modifier">
-          <span class="styleguide-modifier-name">:disabled</span>
-          <a href="#" class="btn pseudo-class-disabled">Link Button</a>
-<button class="btn pseudo-class-disabled">Button Element</button>
-<input type="button" class="btn pseudo-class-disabled" value="input[type='button']"/>
-        </div>
-        
-        <div class="styleguide-element styleguide-modifier">
-          <span class="styleguide-modifier-name">:active</span>
-          <a href="#" class="btn pseudo-class-active">Link Button</a>
-<button class="btn pseudo-class-active">Button Element</button>
-<input type="button" class="btn pseudo-class-active" value="input[type='button']"/>
-        </div>
-        
-        <div class="styleguide-element styleguide-modifier">
-          <span class="styleguide-modifier-name">.btn-primary</span>
-          <a href="#" class="btn btn-primary">Link Button</a>
-<button class="btn btn-primary">Button Element</button>
-<input type="button" class="btn btn-primary" value="input[type='button']"/>
-        </div>
-        
-        <div class="styleguide-element styleguide-modifier">
-          <span class="styleguide-modifier-name">.btn-primary:hover</span>
-          <a href="#" class="btn btn-primary pseudo-class-hover">Link Button</a>
-<button class="btn btn-primary pseudo-class-hover">Button Element</button>
-<input type="button" class="btn btn-primary pseudo-class-hover" value="input[type='button']"/>
-        </div>
-        
-        <div class="styleguide-element styleguide-modifier">
-          <span class="styleguide-modifier-name">.btn-primary:active</span>
-          <a href="#" class="btn btn-primary pseudo-class-active">Link Button</a>
-<button class="btn btn-primary pseudo-class-active">Button Element</button>
-<input type="button" class="btn btn-primary pseudo-class-active" value="input[type='button']"/>
-        </div>
         
 
         <div class="styleguide-html styleguide-reset">
           <div class="styleguide-html-highlight">
-            <pre><code class="xml">&lt;a href=&quot;#&quot; class=&quot;btn {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
-&lt;button class=&quot;btn {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
-&lt;input type=&quot;button&quot; class=&quot;btn {$modifiers}&quot; value=&quot;input[type=&#x27;button&#x27;]&quot;/&gt;</code></pre>
+            <pre><code class="xml">&lt;header class=&quot;site-header {$modifiers}&quot;&gt;&lt;/header&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      <div class="styleguide-example">
+        <header class="styleguide-example-header styleguide-reset">
+          <h3>1.1.1 <em>Logo</em></h3>
+        </header>
+        
+        <div class="styleguide-description styleguide-markdown-body styleguide-reset">
+          <p>The logo image resides within a link with the class &apos;logo&apos;.</p>
+
+
+          <ul class="styleguide-modifier">
+              
+          </ul>
+        </div>
+        
+
+        <div class="styleguide-element">
+          <a class="logo {$modifiers}"></a>
+        </div>
+
+        
+
+        <div class="styleguide-html styleguide-reset">
+          <div class="styleguide-html-highlight">
+            <pre><code class="xml">&lt;a class=&quot;logo {$modifiers}&quot;&gt;&lt;/a&gt;</code></pre>
           </div>
         </div>
       </div>

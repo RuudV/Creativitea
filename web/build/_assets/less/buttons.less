@@ -1,59 +1,76 @@
-// A generic button, used in forms or generic actions.
+// Buttons
 //
-// :hover             - Darken, to indicate a hover.
-// :active            - Brighten up, to indicate the buttons active state.
-// :disabled          - For when a button doesn't want to be clicked.
+// A majority of buttons in the site are built from the same base class.
+// 
+// Markup:
+// <a href="#" class="btn {$modifiers}">Link Button</a>
+// <button class="btn {$modifiers}">Button Element</button>
+// <input type="button" class="btn {$modifiers}" value="input[type='button']"/>
+// 
+// :hover                   - Highlight the button when hovered.
+// :disabled                - Make the button change appearance to reflect it being disabled.
+// :active                  - "Press" the button down when clicked.
+// .btn-primary             - Indicate that the button is the primary feature of this form.
+// .btn-primary:hover       - Indicate that the button is the primary feature of this form.
+// .btn-primary:active      - Indicate that the button is the primary feature of this form.
 //
-// Styleguide 1.
-a.btn,
-button.btn {
+// Styleguide 2.1
+.btn {
+  @color: #969696;
+  @backgroundColor: #efefef;
+  
   font-family: Lato;
   font-size: 16px;
-  font-weight: regular;
-  color: #3C3C3C;
+  font-weight: 400;
+  color: @color;
   line-height: 20px;
   letter-spacing: 1px;
+  border: none;
   border-radius: 18px;
   padding: 8px 35px;
-  background: #EFEFEF;
-  
+  background: @backgroundColor;
+  text-decoration: none;
+
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  
+  -webkit-font-smoothing: antialiased;
+  &:visited, &:hover {
+    color: @color;
+  }
   &:hover {
-    background: #D8D8D8;
+    background: darken(@backgroundColor, 5%);
   }
   &:active {
-    background: #979797;
+    color: #fff;
+    background: darken(@backgroundColor, 50%);
   }
   &:disabled,
   &.disabled {
     opacity: .7;
   }
-}
-
-// An call to action button, used in forms or generic actions.
-//
-// :hover             - Darken, to indicate a hover.
-// :active            - Brighten up, to indicate the buttons active state.
-// :disabled          - For when a button doesn't want to be clicked.
-//
-// Styleguide 1.0.1
-
-a.btn.btn-action,
-button.btn.btn-action {
-  color: #FFF;
-  background: #F5A623;
   
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  &:hover {
-    background: #CC8613;
-  }
-  &:active {
-    background: #956008;
-  }
-  &:disabled,
-  &.disabled {
-    opacity: .4;
+  // Primary Buttons
+  &.btn-primary {
+    @color: #fff;
+    @backgroundColor: #f5a623;
+
+    color: @color;
+    background: @backgroundColor;
+    &:hover,
+    &:active,
+    &:visited {
+      color: #fff;
+    }
+    &:hover {
+      background: lighten(@backgroundColor, 20%);
+    }
+    &:active {
+      background: darken(@backgroundColor, 10%);
+    }
+    &:disabled,
+    &.disabled {
+      opacity: .4;
+    }
   }
 }

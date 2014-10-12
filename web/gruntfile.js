@@ -156,12 +156,12 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          src: ['dev/**/*.html', '!dev/_assets/includes/*.html']
+          src: ['dev/**/*.html', '!dev/_includes/*.html']
         }
       },
       build: {
         files: {
-          src: ['build/**/*.html', '!build/_assets/includes/*.html']
+          src: ['build/**/*.html', '!build/_includes/*.html']
         }
       }
     },
