@@ -1,11 +1,14 @@
-/* Reset.less
- * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
- * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* 
+html5doctor.com Reset Stylesheet v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+*/
 html,
-body {
-  margin: 0;
-  padding: 0;
-}
+body,
+div,
+span,
+object,
+iframe,
 h1,
 h2,
 h3,
@@ -15,9 +18,7 @@ h6,
 p,
 blockquote,
 pre,
-a,
 abbr,
-acronym,
 address,
 cite,
 code,
@@ -25,27 +26,27 @@ del,
 dfn,
 em,
 img,
+ins,
+kbd,
 q,
-s,
 samp,
 small,
-strike,
 strong,
 sub,
 sup,
-tt,
 var,
-dd,
+b,
+i,
 dl,
 dt,
-li,
+dd,
 ol,
 ul,
+li,
 fieldset,
 form,
 label,
 legend,
-button,
 table,
 caption,
 tbody,
@@ -53,42 +54,34 @@ tfoot,
 thead,
 tr,
 th,
-td {
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 100%;
-  line-height: 1;
-  font-family: inherit;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-ol,
-ul {
-  list-style: none;
-}
-q:before,
-q:after,
-blockquote:before,
-blockquote:after {
-  content: "";
-}
-html {
-  overflow-y: scroll;
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-a:focus {
-  outline: thin dotted;
-}
-a:hover,
-a:active {
   outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
 }
 article,
 aside,
@@ -98,75 +91,69 @@ figure,
 footer,
 header,
 hgroup,
+menu,
 nav,
 section {
   display: block;
 }
-audio,
-canvas,
-video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
+nav ul {
+  list-style: none;
 }
-audio:not([controls]) {
-  display: none;
+blockquote,
+q {
+  quotes: none;
 }
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-img {
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-}
-button,
-input,
-select,
-textarea {
-  font-size: 100%;
+a {
   margin: 0;
+  padding: 0;
+  font-size: 100%;
   vertical-align: baseline;
-  *vertical-align: middle;
+  background: transparent;
 }
-button,
-input {
-  line-height: normal;
-  *overflow: visible;
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
 }
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
   border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
   padding: 0;
 }
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  cursor: pointer;
-  -webkit-appearance: button;
-}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-textarea {
-  overflow: auto;
-  vertical-align: top;
+input,
+select {
+  vertical-align: middle;
 }
 .hide {
   display: none;
