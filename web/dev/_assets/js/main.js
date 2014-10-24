@@ -3,12 +3,12 @@
 function loggings() {
   "use strict";
   
-  var langevariable;
-  langevariable = 'tekstje';
+  var korteVar;
+  korteVar = 'tekstje';
   
   console.log('yihaa!');
   console.log('yippiekaye, watchings!');
-  console.log(langevariable);
+  console.log(korteVar);
 }
 
 loggings();

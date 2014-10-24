@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300);
 /* 
 html5doctor.com Reset Stylesheet v1.6.1
 Last Updated: 2010-09-17
@@ -157,6 +158,18 @@ select {
 }
 .hide {
   display: none;
+}
+* + * {
+  margin-top: 1em;
+}
+body {
+  background: #efefef;
+}
+body {
+  font-family: 'Fira Sans';
+  font-weight: 300;
+  font-size: 18px;
+  color: #2a363b;
 }
 .site-header {
   min-height: 200px;
