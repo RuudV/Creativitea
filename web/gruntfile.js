@@ -8,14 +8,11 @@ module.exports = function (grunt) {
 
   // Project configuration.
   grunt.initConfig({
-
-
     pkg: grunt.file.readJSON('package.json'),
 
-
     /*
-    Clean Task for deleting files/folders etc...
-    */
+     Clean Task for deleting files/folders etc...
+     */
     clean: {
       dev: ['dev/'],
       build: ["build/"],
@@ -33,8 +30,8 @@ module.exports = function (grunt) {
 
 
     /*
-    Copy files/folders
-    */
+     Copy files/folders
+     */
     copy: {
       dev: {
         cwd: 'src',
@@ -44,19 +41,19 @@ module.exports = function (grunt) {
       },
       build: {
         cwd: 'src',
-        src: [ '**' ],
+        src: ['**'],
         dest: 'build',
         expand: true
       },
       watchJs: {
         cwd: 'src',
-        src: [ '**/*.js' ],
+        src: ['**/*.js'],
         dest: 'dev',
         expand: true
       },
       watchLess: {
         cwd: 'src',
-        src: [ '**/*.less' ],
+        src: ['**/*.less'],
         dest: 'dev',
         expand: true
       },
@@ -70,16 +67,16 @@ module.exports = function (grunt) {
 
 
     /*
-    Check javascript files for errors
-    */
+     Check javascript files for errors
+     */
     jshint: {
       all: ['src/_assets/js/*.js']
     },
 
 
     /*
-    Uglify and generate sourcemaps for javascripts
-    */
+     Uglify and generate sourcemaps for javascripts
+     */
     uglify: {
       dev: {
         options: {
@@ -88,7 +85,10 @@ module.exports = function (grunt) {
           mangle: {},
           compress: true
         },
-        src: 'dev/_assets/js/*.js',
+        src: [
+          'dev/_assets/js/*.js',
+          'dev/_vendors/picturefill/picturefill.min.js'
+        ],
         dest: 'dev/_assets/js/main.min.js'
       },
       build: {
@@ -97,14 +97,17 @@ module.exports = function (grunt) {
           mangle: {},
           compress: true
         },
-        src: 'build/_assets/js/*js',
+        src: [
+          'dev/_assets/js/*.js',
+          'dev/_vendors/picturefill/picturefill.min.js'
+        ],
         dest: 'build/_assets/js/main.min.js'
       }
     },
 
     /*
-    Generate minified css from less files
-    */
+     Generate minified css from less files
+     */
     less: {
       dev: {
         options: {
@@ -125,8 +128,8 @@ module.exports = function (grunt) {
     },
 
     /*
-    Process html files for script tags, templates, less links etc...
-    */
+     Process html files for script tags, templates, less links etc...
+     */
     processhtml: {
       dev: {
         files: [{
@@ -147,8 +150,8 @@ module.exports = function (grunt) {
     },
 
     /*
-    Check html files with the w3c validator
-    */
+     Check html files with the w3c validator
+     */
     validation: {
       options: {
         reset: true,
@@ -167,8 +170,8 @@ module.exports = function (grunt) {
     },
 
     /*
-    Remove unused css
-    */
+     Remove unused css
+     */
     uncss: {
       build: {
         files: {
@@ -178,8 +181,8 @@ module.exports = function (grunt) {
     },
 
     /*
-    Minify the css processed by uncss
-    */
+     Minify the css processed by uncss
+     */
     cssmin: {
       build: {
         files: {
@@ -189,8 +192,8 @@ module.exports = function (grunt) {
     },
 
     /*
-    Watch files for specific grunt tasks
-    */
+     Watch files for specific grunt tasks
+     */
     watch: {
       watchJs: {
         files: ['src/_assets/js/*.js'],
@@ -222,9 +225,8 @@ module.exports = function (grunt) {
 
 
   /*
-  Load plugins
-  */
-  grunt.loadNpmTasks('grunt-bower-task');
+   Load plugins
+   */
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -237,8 +239,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   /*
-  Declare tasks
-  */
+   Declare tasks
+   */
   //Default task //cmd: grunt
   // NOTE: grunt.registerTask('default') - Don't use this atm, not ready
   // TODO: grunt.registerTask('default') - Let default grunt task run a build and dev build
@@ -279,6 +281,7 @@ module.exports = function (grunt) {
     'processhtml:build',
     'validation:build',
     'uncss:build',
-    'cssmin:build'
+    'cssmin:build',
+    'clean:build_assets'
   ]);
 };

@@ -1,16 +1,26 @@
 // Vars for Scaffolding
 @bodyBg: #fff;
 
+html,
+body {
+  height: 100%;
+}
+
 // Make sure every element has a margin of 1em
 * + * {
-  margin-top: 1em;
+  margin-top: 1rem;
+  background: red;
 }
 
 body {
   background: @bodyBg;
+  border-left: 2px solid #2A363B;
+  border-right: 2px solid #2A363B;
+  margin-bottom: 0;
 }
 
-.content {
+.content,
+.wrapper {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;

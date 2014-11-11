@@ -7,7 +7,7 @@
 //
 // Styleguide 2.1
 .site-header {
-  min-height: 200px;
+  position: relative;
 }
 
 // Logo
@@ -19,10 +19,22 @@
 //
 // Styleguide 2.1.1
 .logo {
+  position: relative;
+  z-index: 2;
   display: block;
   max-width: 300px;
-  margin: 30px auto;
+  margin: -11px auto 30px;
   img {
     max-width: 100%;
   }
+}
+
+#main-nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: #efefef;
 }
