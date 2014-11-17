@@ -6,16 +6,14 @@ body {
   height: 100%;
 }
 
-// Make sure every element has a margin of 1em
-* + * {
-  margin-top: 1rem;
-  background: red;
+// Make sure every element has a margin of 1rem
+// body is there for specificity reasons
+body * + * {
+  margin-top: 1em;
 }
 
 body {
   background: @bodyBg;
-  border-left: 2px solid #2A363B;
-  border-right: 2px solid #2A363B;
   margin-bottom: 0;
 }
 

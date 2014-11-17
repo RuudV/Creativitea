@@ -94,12 +94,13 @@ module.exports = function (grunt) {
       build: {
         options: {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */',
+          sourceMap: false,
           mangle: {},
           compress: true
         },
         src: [
-          'dev/_assets/js/*.js',
-          'dev/_vendors/picturefill/picturefill.min.js'
+          'build/_assets/js/*.js',
+          'build/_vendors/picturefill/picturefill.min.js'
         ],
         dest: 'build/_assets/js/main.min.js'
       }
@@ -170,12 +171,17 @@ module.exports = function (grunt) {
     },
 
     /*
-     Remove unused css
+     Auto prefix css properties that need them
      */
-    uncss: {
+    autoprefixer: {
+      dev: {
+        files: {
+          'dev/_assets/css/styles.min.css': 'dev/_assets/css/styles.min.css'
+        }
+      },
       build: {
         files: {
-          'build/_assets/css/styles.min.css': ['build/*.html']
+          'build/_assets/css/styles.min.css': 'build/_assets/css/styles.min.css'
         }
       }
     },
@@ -208,7 +214,8 @@ module.exports = function (grunt) {
         tasks: [
           'clean:watchLess',
           'copy:watchLess',
-          'less:dev'
+          'less:dev',
+          'autoprefixer:dev'
         ]
       },
       watchHtml: {
@@ -234,8 +241,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-html-validation');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   /*
@@ -251,7 +258,6 @@ module.exports = function (grunt) {
     'less',
     'processhtml',
     'validation',
-    'uncss',
     'cssmin'
   ]);
 
@@ -267,6 +273,7 @@ module.exports = function (grunt) {
     'copy:dev',
     'uglify:dev',
     'less:dev',
+    'autoprefixer:dev',
     'processhtml:dev',
     'validation:dev'
   ]);
@@ -280,7 +287,7 @@ module.exports = function (grunt) {
     'less:build',
     'processhtml:build',
     'validation:build',
-    'uncss:build',
+    'autoprefixer:build',
     'cssmin:build',
     'clean:build_assets'
   ]);

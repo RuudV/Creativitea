@@ -29,12 +29,19 @@
   }
 }
 
-#main-nav {
+.main-nav {
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 40px;
   background: #efefef;
+  // reset margin
+  margin-top: 0;
+  transition: margin-top .3s ease-in-out;
+  // #main-nav on scroll down
+  &.main-nav-hidden-js {
+    margin-top: -40px;
+  }
 }

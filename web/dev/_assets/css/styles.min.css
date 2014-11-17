@@ -163,14 +163,11 @@ html,
 body {
   height: 100%;
 }
-* + * {
-  margin-top: 1rem;
-  background: red;
+body * + * {
+  margin-top: 1em;
 }
 body {
   background: #ffffff;
-  border-left: 2px solid #2A363B;
-  border-right: 2px solid #2A363B;
   margin-bottom: 0;
 }
 .content,
@@ -202,14 +199,27 @@ body {
 .logo img {
   max-width: 100%;
 }
-#main-nav {
+.main-nav {
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 40px;
   background: #efefef;
+  margin-top: 0;
+  -webkit-transition: margin-top 0.3s ease-in-out;
+          transition: margin-top 0.3s ease-in-out;
+}
+.main-nav.main-nav-hidden-js {
+  margin-top: -40px;
+}
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: slategrey;
 }
 .btn {
   font-family: Lato;
