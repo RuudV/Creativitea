@@ -24,9 +24,8 @@
   display: block;
   max-width: 300px;
   margin: -11px auto 30px;
-  img {
-    max-width: 100%;
-  }
+  // preven issue for the main nav to overlap the logo
+  transform: translate3d(0,0,0);
 }
 
 .main-nav {
@@ -39,9 +38,9 @@
   background: #efefef;
   // reset margin
   margin-top: 0;
-  transition: margin-top .3s ease-in-out;
+  transition: transform .3s ease-in-out;
   // #main-nav on scroll down
   &.main-nav-hidden-js {
-    margin-top: -40px;
+    transform: translate3d(0,-40px,0);
   }
 }
