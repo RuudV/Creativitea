@@ -159,8 +159,14 @@ select {
 .hide {
   display: none;
 }
+.full {
+  width: 98.33333333%;
+}
 .half {
   width: 48.33333333%;
+}
+.third {
+  width: 31.66666667%;
 }
 .quarter {
   width: 23.33333333%;
@@ -189,7 +195,8 @@ body {
   max-width: 76.66666667rem;
   padding: 0 0.83333333%;
 }
-.featured-content {
+.featured-content,
+.covers {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,10 +213,37 @@ body {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
+.featured-content {
+  margin-bottom: 5%;
+}
+.post-list-item {
+  margin-bottom: 1.66666667%;
+}
+.featured-content .post-list-item {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 59.365rem) {
+  .quarter {
+    width: 31.66666667%;
+  }
+}
 @media screen and (max-width: 37.5rem) {
-  .half {
-    width: 96.66666667%;
+  .featured-content .post-list-item {
     margin-bottom: 1.66666667%;
+    margin-left: -6.66666667%;
+    margin-right: -6.66666667%;
+    width: 100vw;
+  }
+  .half {
+    width: 98.33333333%;
+  }
+  .quarter {
+    width: 48.33333333%;
+  }
+}
+@media screen and (max-width: 25rem) {
+  .quarter {
+    width: 98.33333333%;
   }
 }
 html,
@@ -230,10 +264,11 @@ h5,
 h6 {
   font-family: 'Merriweather', Times, serif;
   font-weight: 700;
-  color: #C2C9CC;
+  color: rgba(45, 57, 64, 0.5);
   line-height: 1.3em;
 }
-h1 {
+h1,
+h2 {
   padding: 1rem 0;
   font-size: 1.3125rem;
 }

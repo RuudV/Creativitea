@@ -15,15 +15,21 @@
   }
 }
 
+.full {
+  width: (@colWidth*12) + (@gutterWidth*11);
+}
+
 .half {
   width: (@colWidth*6) + (@gutterWidth*5);
+}
+
+.third {
+  width: (@colWidth*4) + (@gutterWidth*3);
 }
 
 .quarter {
   width: (@colWidth*3) + (@gutterWidth*2);
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -56,19 +62,52 @@ body {
 
 }
 
-.featured-content {
+.featured-content,
+.covers {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
+.featured-content {
+  margin-bottom: @gutterWidth * 3;
+}
+
 .post-list-item {
+  margin-bottom: @gutterWidth;
+  .featured-content & {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 59.365rem) {
+  .quarter {
+    width: (@colWidth*4) + (@gutterWidth*3);
+  }
 }
 
 @media screen and (max-width: 37.5rem) {
+  .post-list-item {
+    .featured-content & {
+      margin-bottom: @gutterWidth;
+      margin-left: @gutterWidth * -4;
+      margin-right: @gutterWidth * -4;
+      width: 100vw;
+    }
+  }
+
   .half {
-    width: (@colWidth*12) + (@gutterWidth*10);
-    margin-bottom: @gutterWidth;
+    width: (@colWidth*12) + (@gutterWidth*11);
+  }
+
+  .quarter {
+    width: (@colWidth*6) + (@gutterWidth*5);
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  .quarter {
+    width: (@colWidth*12) + (@gutterWidth*11);
   }
 }
