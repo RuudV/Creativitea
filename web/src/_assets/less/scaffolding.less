@@ -1,19 +1,42 @@
 // Vars for Scaffolding
 @bodyBg: #fff;
 
+@colWidth: (80*100)/1200%;
+@gutterWidth: (20*100)/1200%;
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.half {
+  width: (@colWidth*6) + (@gutterWidth*5);
+}
+
+.quarter {
+  width: (@colWidth*3) + (@gutterWidth*2);
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
 }
 
 img {
+  display: block;
   max-width: 100%;
-}
-
-// Make sure every element has a margin of 1rem
-// body is there for specificity reasons
-body * + * {
-  margin-top: 1em;
 }
 
 body {
@@ -24,6 +47,28 @@ body {
 .content,
 .wrapper {
   max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 75rem + @gutterWidth;
+  padding: 0 ((@gutterWidth * .5));
+
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.post-list-item {
+}
+
+@media screen and (max-width: 37.5rem) {
+  .half {
+    width: (@colWidth*12) + (@gutterWidth*10);
+    margin-bottom: @gutterWidth;
+  }
 }

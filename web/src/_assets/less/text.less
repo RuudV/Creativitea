@@ -1,7 +1,7 @@
 // Import fonts from Google Fonts
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:300);
 
-@baseFont: #2A363B;
+@baseFont: #2D3940;
 
 // Set base font-size
 // All measurements are indicated in 'rems' and thus relative to the font-size specified here
@@ -12,6 +12,23 @@ html, body {
 body {
   font-family: 'Merriweather Sans', arial, sans-serif;
   font-weight: 300;
-  line-height: 1.5rem;
+  line-height: 1.5em;
   color: @baseFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', Times, serif;
+  font-weight: 700;
+  color: #C2C9CC;
+  line-height: 1.3em;
+}
+
+h1 {
+  padding: 1rem 0;
+  font-size: 1.3125rem;
 }
