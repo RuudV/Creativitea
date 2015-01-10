@@ -1,5 +1,5 @@
 // Import fonts from Google Fonts
-@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:800,800italic,700,300italic,400italic,300,700italic,400);
 
 @baseFont: #2D3940;
 
@@ -7,10 +7,12 @@
 // All measurements are indicated in 'rems' and thus relative to the font-size specified here
 html, body {
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;;
 }
 
 body {
-  font-family: 'Merriweather Sans', arial, sans-serif;
+  font-family: 'Merriweather Sans', 'Lucida Grande', Tahoma, sans-serif;
   font-weight: 300;
   line-height: 1.5em;
   color: @baseFont;
@@ -22,14 +24,127 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Merriweather', Times, serif;
-  font-weight: 700;
-  color: fade(@baseFont, 50%);
+  font-weight: 300;
   line-height: 1.3em;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   padding: 1rem 0;
-  font-size: 1.3125rem;
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: @baseFont;
+  text-decoration: none;
+  border-bottom: 1px solid fade(@baseFont, 30%);
+  padding-bottom: 0;
+
+  .post-list-item-categories &,
+  .article-categories & {
+    color: fade(@baseFont, 60%);
+  }
+
+  .post-list-item &,
+  .post-list-item &,
+  .article-header & {
+    border-bottom: 1px solid transparent;
+
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      padding-bottom: 2px;
+      border-bottom: 1px solid fade(@baseFont, 30%);
+    }
+  }
+
+  .nav-bar & {
+    font-weight: 400;
+    border: none;
+  }
+
+  .post-list-item-caption & {
+    color: @baseFont;
+  }
+}
+
+.main-nav-list,
+.secondary-nav-list {
+  text-align: center;
+}
+
+.post-list-item {
+  color: fade(@baseFont, 30%);
+
+  .covers & {
+    font-size: .75rem;
+  }
+
+  .featured-content & {
+    font-size: .875rem;
+  }
+}
+
+.post-list-item-categories,
+.article-categories {
+  color: fade(@baseFont, 30%);
+  text-transform: lowercase;
+}
+
+.post-list-item-caption {
+  color: @baseFont;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(255, 255, 255, .4);
+}
+
+.post-list-item-title,
+.post-list-item-author {
+  .touch & {
+    font-size: .875rem;
+
+    padding: 1rem 0 0;
+  }
+
+  .no-touch & {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.featured-content {
+  .post-list-item-title,
+  .post-list-item-author {
+    .touch & {
+      font-size: 1rem;
+    }
+  }
+}
+
+.post-list-item-by {
+  font-size: .75rem;
+  line-height: 1.5rem;
+  font-style: italic;
+}
+
+.article-title {
+  color: @baseFont;
+}
+
+.article-artists {
+  color: fade(@baseFont, 20%);
+}
+
+.article-title-by {
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+.article-header {
+  text-align: center;
+  color: fade(@baseFont, 50%);
 }

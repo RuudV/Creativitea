@@ -1,46 +1,238 @@
-// Header
-//
-// The header reserves the space for the menu and the website's logo.
-// 
-// Markup:
-// <header class="site-header {$modifiers}"></header>
-//
-// Styleguide 2.1
+/*
+Less Styles for the header
+*/
+
 .site-header {
   position: relative;
 }
 
-// Logo
-//
-// The logo image resides within a link with the class 'logo'.
-// 
-// Markup:
-// <a class="logo {$modifiers}"></a>
-//
-// Styleguide 2.1.1
 .logo {
   position: relative;
-  z-index: 2;
   display: block;
-  max-width: 300px;
-  margin: -11px auto 30px;
-  // preven issue for the main nav to overlap the logo
-  transform: translate3d(0,0,0);
+  max-width: 5.25rem;
+  margin: 3.5rem auto 2rem;
+  // remove border set by basic link styling
+  border: none;
 }
 
-.main-nav {
+.nav-bar-wrapper {
+  position: relative;
+}
+
+.nav-bar {
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   height: 40px;
-  background: #D9DCDE;
+  background: #f9f9f9;
+  overflow: hidden;
   // reset margin
   margin-top: 0;
-  transition: transform .3s ease-in-out;
+  transition: transform .6s cubic-bezier(0, 1, .5, 1);
   // #main-nav on scroll down
-  &.main-nav-hidden-js {
-    transform: translate3d(0,-40px,0);
+  &.nav-bar-hidden-js {
+    transition: transform .9s ease-in-out;
+    // -100px so Yosemite Safari maintains its frosted effect
+    transform: translate3d(0, -100px, 0);
+  }
+}
+
+.nav-bar-logo {
+  position: absolute;
+  display: block;
+  padding: 14px;
+  width: 78px;
+  opacity: 0;
+
+  z-index: 3;
+  transform: scale(0, 0);
+
+  transition: all .3s ease-in-out;
+  .nav-bar-logo-visible-js & {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+.main-nav-list,
+.secondary-nav-list {
+  height: 40px;
+  margin-left: 0;
+
+  transition: all .3s ease-in-out;
+  > li {
+    display: inline-block;
+    margin-left: .625rem;
+
+    // text related properties are here for positioning reasons
+    line-height: 0;
+    font-size: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    > a {
+      display: block;
+      height: 40px;
+
+      // reset text related properties
+      font-size: 1rem;
+      line-height: 40px;
+    }
+  }
+}
+
+.secondary-nav-list-toggle {
+  display: block;
+  height: 40px;
+  width: 40px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  > span {
+    display: block;
+    height: 4px;
+    width: 4px;
+
+    position: absolute;
+    right: 10px;
+
+    border-radius: 2px;
+    background: @baseFont;
+
+    transition: all .3s ease-in-out;
+    &:nth-child(1) {
+      top: 12px;
+    }
+    &:nth-child(2) {
+      opacity: 1;
+      top: 18px;
+    }
+    &:nth-child(3) {
+      top: 24px;
+    }
+  }
+
+  .secondary-nav-list-visible-js & {
+    > span {
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(1),
+      &:nth-child(3) {
+        width: 14px;
+        height: 3px;
+        border-radius: 0;
+      }
+      &:nth-child(1) {
+        transform: translate3d(0, 6px, 0) rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: translate3d(0, -6px, 0) rotate(-45deg);
+      }
+    }
+  }
+}
+
+/*
+Maximum width of 36.25rem (580px)
+*/
+@media (max-width: 36.25rem) {
+  .main-nav-list,
+  .secondary-nav-list,
+  .secondary-nav-list-toggle {
+    position: absolute;
+  }
+
+  .main-nav-list {
+    transform: translate3d(0, 0, 0);
+
+    .secondary-nav-list-visible-js & {
+      transform: translate3d(0, 40px, 0);
+    }
+  }
+
+  .main-nav-list,
+  .secondary-nav-list {
+    width: 100%;
+
+    .nav-bar-logo-visible-js & {
+      margin-left: 20px;
+    }
+  }
+
+  .secondary-nav-list {
+    transform: translate3d(0, -40px, 0);
+
+    .secondary-nav-list-visible-js & {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+@media (min-width: 36.3125rem) {
+  .logo {
+    max-width: 20rem;
+    min-width: 18.125rem;
+    width: 30vw;
+    margin-top: 2rem;
+    z-index: 2;
+    // prevent issue for the main nav to overlap the logo
+    transform: translate3d(0, 0, 0);
+  }
+
+  .nav-bar-wrapper {
+    padding: 0 1rem;
+  }
+
+  .nav-bar-logo {
+    left: 50%;
+    padding: 10px 0;
+    margin-left: -43.5px;
+    width: 87px;
+
+    transform: scale(0, 0);
+
+    .nav-bar-logo-visible-js & {
+      transform: scale(1, 1);
+    }
+  }
+
+  .main-nav-list {
+    float: left;
+    text-align: left;
+    height: 40px;
+    > li {
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .secondary-nav-list {
+    float: right;
+    text-align: right;
+    > li {
+      margin: 0 1rem 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .secondary-nav-list-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 77rem) {
+  .nav-bar-wrapper {
+    padding: 0;
   }
 }

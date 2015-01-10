@@ -70,7 +70,7 @@ module.exports = function (grunt) {
      Check javascript files for errors
      */
     jshint: {
-      all: ['src/_assets/js/*.js']
+      all: ['src/_assets/js/**/*.js']
     },
 
 
@@ -204,6 +204,7 @@ module.exports = function (grunt) {
       watchJs: {
         files: ['src/_assets/js/*.js'],
         tasks: [
+          'jshint',
           'clean:watchJs',
           'copy:watchJs',
           'uglify:dev'
@@ -248,20 +249,23 @@ module.exports = function (grunt) {
   /*
    Declare tasks
    */
-  //Default task //cmd: grunt
+  //Default task // cmd: grunt
   // NOTE: grunt.registerTask('default') - Don't use this atm, not ready
   // TODO: grunt.registerTask('default') - Let default grunt task run a build and dev build
   grunt.registerTask('default', [
+    'jshint',
     'clean:dev', 'clean:build',
     'copy:dev', 'copy:build',
     'uglify',
     'less',
     'processhtml',
     'validation',
-    'cssmin'
+    'autoprefixer',
+    'cssmin',
+    'clean:build_assets'
   ]);
 
-  // Check js task //cmd: grunt checkjs
+  // Check js task // cmd: grunt checkjs
   grunt.registerTask('checkjs', [
     'jshint'
   ]);
@@ -278,7 +282,7 @@ module.exports = function (grunt) {
     'validation:dev'
   ]);
 
-  // Build task //cmd: grunt build
+  // Build task // cmd: grunt build
   grunt.registerTask('build', [
     'jshint',
     'clean:build',
