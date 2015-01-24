@@ -13,30 +13,39 @@ Less Styles for the header
   margin: 3.5rem auto 2rem;
   // remove border set by basic link styling
   border: none;
-}
 
-.nav-bar-wrapper {
-  position: relative;
+  transform: scale(1) translate3d(0, 0, 0);
+  transition: transform .3s ease-in-out;
+
+  &.logo-hidden-js {
+    transform: scale(0) translate3d(0, 0, 0);
+  }
 }
 
 .nav-bar {
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   height: 40px;
   background: #f9f9f9;
-  overflow: hidden;
+
   // reset margin
   margin-top: 0;
   transition: transform .6s cubic-bezier(0, 1, .5, 1);
+
   // #main-nav on scroll down
   &.nav-bar-hidden-js {
     transition: transform .9s ease-in-out;
     // -100px so Yosemite Safari maintains its frosted effect
     transform: translate3d(0, -100px, 0);
   }
+}
+
+.nav-bar-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .nav-bar-logo {
@@ -46,7 +55,6 @@ Less Styles for the header
   width: 78px;
   opacity: 0;
 
-  z-index: 3;
   transform: scale(0, 0);
 
   transition: all .3s ease-in-out;
@@ -139,6 +147,23 @@ Less Styles for the header
   }
 }
 
+.search-bar {
+  background: @baseFont;
+  height: 40px;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+
+  transform: translate3d(0, -40px, 0);
+  transition: all .3s ease-in;
+
+  &.search-bar-visible-js {
+    transform: translate3d(0, 40px, 0);
+    transition: all .3s ease-out;
+  }
+}
+
 /*
 Maximum width of 36.25rem (580px)
 */
@@ -181,9 +206,6 @@ Maximum width of 36.25rem (580px)
     min-width: 18.125rem;
     width: 30vw;
     margin-top: 2rem;
-    z-index: 2;
-    // prevent issue for the main nav to overlap the logo
-    transform: translate3d(0, 0, 0);
   }
 
   .nav-bar-wrapper {
@@ -208,7 +230,7 @@ Maximum width of 36.25rem (580px)
     text-align: left;
     height: 40px;
     > li {
-      margin-left: 1rem;
+      margin-left: .75rem;
       &:first-child {
         margin-left: 0;
       }
@@ -219,7 +241,9 @@ Maximum width of 36.25rem (580px)
     float: right;
     text-align: right;
     > li {
-      margin: 0 1rem 0 0;
+      // set/reset margin from mobile layout
+      margin: 0 .75rem 0 0;
+
       &:last-child {
         margin-right: 0;
       }

@@ -1,0 +1,113 @@
+// Form and input styles
+
+// Resets + Base Styling
+input[type=search] {
+  -webkit-appearance: none;
+  border: none;
+
+  font-size: 1rem;
+  font-family: 'Merriweather Sans';
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-indent: .75rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+button {
+  display: block;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.input-addon-wrapper {
+  display: flex;
+
+  .search-bar & {
+    max-width: 100%;
+
+    @media (min-width: 36.3125rem) {
+      max-width: 50%;
+    }
+
+    @media (min-width: 52.5625rem) {
+      max-width: 100/3%;
+    }
+  }
+}
+
+.input-addon-field {
+  flex: 1;
+}
+
+.search-input {
+  height: 40px;
+  background: lighten(@baseFont, 10%);
+
+  color: lighten(@baseFont, 90%);
+}
+
+.search-input-btn {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: transparent;
+  background: lighten(@baseFont, 10%);
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+
+    height: 0;
+    width: 10px;
+
+    border-top: 3px solid lighten(@baseFont, 90%);
+
+    transform-origin: 10px 0;
+  }
+
+  &::before {
+    transform: translate3d(1px, 1px, 0) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate3d(-1px, -1px, 0) rotate(-45deg);
+  }
+}
+
+.submit-form-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: fade(@baseFont, 50%);
+}
+
+.submit-form-container {
+  width: 100%;
+  max-width: 20rem;
+  background: #fff;
+  min-height: 20rem;
+}
+
+

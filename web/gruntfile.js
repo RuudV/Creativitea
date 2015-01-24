@@ -86,21 +86,22 @@ module.exports = function (grunt) {
           compress: true
         },
         src: [
-          'dev/_assets/js/*.js',
-          'dev/_vendors/picturefill/picturefill.min.js'
+          'dev/_assets/js/helpers.js',
+          'dev/_assets/js/main.js',
+          'dev/_vendors/picturefill/picturefill.js'
         ],
         dest: 'dev/_assets/js/main.min.js'
       },
       build: {
         options: {
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */',
           sourceMap: false,
           mangle: {},
           compress: true
         },
         src: [
-          'build/_assets/js/*.js',
-          'build/_vendors/picturefill/picturefill.min.js'
+          'dev/_assets/js/helpers.js',
+          'dev/_assets/js/main.js',
+          'build/_vendors/picturefill/picturefill.js'
         ],
         dest: 'build/_assets/js/main.min.js'
       }
@@ -146,6 +147,28 @@ module.exports = function (grunt) {
           src: '**/*.html',
           dest: 'build/',
           cwd: 'build/'
+        }]
+      }
+    },
+
+    /*
+     Replace the timestamp string in html files for cache busting purposes
+     */
+    replace: {
+      dev: {
+        options: {
+          patterns: [
+            {
+              match: 'timestamp',
+              replacement: '<%= new Date().getTime() %>'
+            }
+          ]
+        },
+        files: [{
+          expand: true,
+          src: '**/*.html',
+          dest: 'dev/',
+          cwd: 'dev/'
         }]
       }
     },
@@ -207,7 +230,8 @@ module.exports = function (grunt) {
           'jshint',
           'clean:watchJs',
           'copy:watchJs',
-          'uglify:dev'
+          'uglify:dev',
+          'replace:dev'
         ]
       },
       watchLess: {
@@ -216,7 +240,8 @@ module.exports = function (grunt) {
           'clean:watchLess',
           'copy:watchLess',
           'less:dev',
-          'autoprefixer:dev'
+          'autoprefixer:dev',
+          'replace:dev'
         ]
       },
       watchHtml: {
@@ -241,6 +266,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-replace');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -259,6 +285,7 @@ module.exports = function (grunt) {
     'uglify',
     'less',
     'processhtml',
+    'replace:dev',
     'validation',
     'autoprefixer',
     'cssmin',
@@ -279,6 +306,7 @@ module.exports = function (grunt) {
     'less:dev',
     'autoprefixer:dev',
     'processhtml:dev',
+    'replace:dev',
     'validation:dev'
   ]);
 

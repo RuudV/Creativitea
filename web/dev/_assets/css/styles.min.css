@@ -207,6 +207,9 @@ img {
 body {
   background: #ffffff;
 }
+body.disable-hover-js {
+  pointer-events: none;
+}
 .content,
 .wrapper {
   max-width: 75rem;
@@ -224,6 +227,23 @@ body {
   .wrapper-padding {
     padding: 0;
   }
+}
+.search-bar {
+  z-index: 1;
+}
+.nav-bar {
+  z-index: 2;
+}
+@media (min-width: 36.3125rem) {
+  .logo {
+    z-index: 3;
+  }
+}
+.nav-bar-logo {
+  z-index: 4;
+}
+.submit-form-wrapper {
+  z-index: 5;
 }
 html,
 body {
@@ -353,19 +373,22 @@ Less Styles for the header
   max-width: 5.25rem;
   margin: 3.5rem auto 2rem;
   border: none;
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+          transform: scale(1) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
 }
-.nav-bar-wrapper {
-  position: relative;
+.logo.logo-hidden-js {
+  -webkit-transform: scale(0) translate3d(0, 0, 0);
+          transform: scale(0) translate3d(0, 0, 0);
 }
 .nav-bar {
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   height: 40px;
   background: #f9f9f9;
-  overflow: hidden;
   margin-top: 0;
   -webkit-transition: -webkit-transform 0.6s cubic-bezier(0, 1, 0.5, 1);
           transition: transform 0.6s cubic-bezier(0, 1, 0.5, 1);
@@ -376,13 +399,17 @@ Less Styles for the header
   -webkit-transform: translate3d(0, -100px, 0);
           transform: translate3d(0, -100px, 0);
 }
+.nav-bar-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
 .nav-bar-logo {
   position: absolute;
   display: block;
   padding: 14px;
   width: 78px;
   opacity: 0;
-  z-index: 3;
   -webkit-transform: scale(0, 0);
       -ms-transform: scale(0, 0);
           transform: scale(0, 0);
@@ -466,6 +493,23 @@ Less Styles for the header
   -webkit-transform: translate3d(0, -6px, 0) rotate(-45deg);
           transform: translate3d(0, -6px, 0) rotate(-45deg);
 }
+.search-bar {
+  background: #2d3940;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  -webkit-transform: translate3d(0, -40px, 0);
+          transform: translate3d(0, -40px, 0);
+  -webkit-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in;
+}
+.search-bar.search-bar-visible-js {
+  -webkit-transform: translate3d(0, 40px, 0);
+          transform: translate3d(0, 40px, 0);
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
 /*
 Maximum width of 36.25rem (580px)
 */
@@ -506,9 +550,6 @@ Maximum width of 36.25rem (580px)
     min-width: 18.125rem;
     width: 30vw;
     margin-top: 2rem;
-    z-index: 2;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
   }
   .nav-bar-wrapper {
     padding: 0 1rem;
@@ -533,7 +574,7 @@ Maximum width of 36.25rem (580px)
     height: 40px;
   }
   .main-nav-list > li {
-    margin-left: 1rem;
+    margin-left: .75rem;
   }
   .main-nav-list > li:first-child {
     margin-left: 0;
@@ -543,7 +584,7 @@ Maximum width of 36.25rem (580px)
     text-align: right;
   }
   .secondary-nav-list > li {
-    margin: 0 1rem 0 0;
+    margin: 0 .75rem 0 0;
   }
   .secondary-nav-list > li:last-child {
     margin-right: 0;
@@ -624,12 +665,15 @@ Base styles
 .covers .post-list-item {
   max-width: 340px;
 }
+.covers .post-list-item-link {
+  display: block;
+}
 .no-touch .covers .post-list-item-figure {
   background: #fff;
   position: relative;
   overflow: hidden;
 }
-.no-touch .covers .post-list-item-figure > img {
+.no-touch .covers .post-list-item-figure .post-list-item-img {
   -webkit-filter: blur(0);
           filter: blur(0);
   opacity: 1;
@@ -638,7 +682,7 @@ Base styles
   -webkit-transition: all 0.3s ease-in;
           transition: all 0.3s ease-in;
 }
-.no-touch .covers .post-list-item-figure:hover > img {
+.no-touch .covers .post-list-item-figure:hover .post-list-item-img {
   -webkit-filter: blur(2px);
           filter: blur(2px);
   opacity: .2;
@@ -766,6 +810,13 @@ Minimum width of 73.0625rem (1169px)
 .article-header {
   margin: 0 auto 64px;
 }
+.article-artists > a {
+  white-space: nowrap;
+}
+.article-artists > a:not(:first-child):nth-child(odd)::before {
+  content: '\A';
+  white-space: pre;
+}
 .article-title-by {
   display: block;
   margin: .5rem 0;
@@ -837,4 +888,104 @@ Minimum width of 73.0625rem (1169px)
   .figure-side-by-side > img:last-child {
     padding-left: 12px;
   }
+}
+input[type=search] {
+  -webkit-appearance: none;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Merriweather Sans';
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-indent: .75rem;
+}
+input[type=search]:focus {
+  outline: none;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+button {
+  display: block;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+.input-addon-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.search-bar .input-addon-wrapper {
+  max-width: 100%;
+}
+@media (min-width: 36.3125rem) {
+  .search-bar .input-addon-wrapper {
+    max-width: 50%;
+  }
+}
+@media (min-width: 52.5625rem) {
+  .search-bar .input-addon-wrapper {
+    max-width: 33.33333333%;
+  }
+}
+.input-addon-field {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.search-input {
+  height: 40px;
+  background: #42545e;
+  color: #ffffff;
+}
+.search-input-btn {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: transparent;
+  background: #42545e;
+}
+.search-input-btn::before,
+.search-input-btn::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  height: 0;
+  width: 10px;
+  border-top: 3px solid #ffffff;
+  -webkit-transform-origin: 10px 0;
+      -ms-transform-origin: 10px 0;
+          transform-origin: 10px 0;
+}
+.search-input-btn::before {
+  -webkit-transform: translate3d(1px, 1px, 0) rotate(45deg);
+          transform: translate3d(1px, 1px, 0) rotate(45deg);
+}
+.search-input-btn::after {
+  -webkit-transform: translate3d(-1px, -1px, 0) rotate(-45deg);
+          transform: translate3d(-1px, -1px, 0) rotate(-45deg);
+}
+.submit-form-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(45, 57, 64, 0.5);
+}
+.submit-form-container {
+  width: 100%;
+  max-width: 20rem;
+  background: #fff;
+  min-height: 20rem;
 }

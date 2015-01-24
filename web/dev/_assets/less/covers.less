@@ -62,6 +62,10 @@ Base styles
   .post-list-item {
     max-width: 340px;
   }
+
+  .post-list-item-link {
+    display: block;
+  }
 }
 
 .no-touch {
@@ -70,18 +74,20 @@ Base styles
       background: #fff;
       position: relative;
       overflow: hidden;
-      > img {
+
+      .post-list-item-img {
         filter: blur(0);
         opacity: 1;
         transform: scale3d(1, 1, 1);
         transition: all .3s ease-in;
       }
       &:hover {
-        > img {
+        .post-list-item-img {
           filter: blur(2px);
           opacity: .2;
           transform: scale3d(1.025, 1.025, 1);
         }
+
         + .post-list-item-categories {
           opacity: 0;
         }

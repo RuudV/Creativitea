@@ -6,14 +6,14 @@
     <meta name="description" content="Creativitea is your daily cup of inspiration for graphic design, illustration, photography, web/interface design and many more creative fields">
     <meta name="author" content="Creativitea">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="_assets/css/styles.min.css">
+    <link rel="stylesheet" href="_assets/css/styles.min.css?rel=@@timestamp">
   </head>
   <body class="preload">
     <header class="site-header">
-  <a href="/" class="logo">
+  <a href="/" class="js-logo logo">
     <picture>
-      <source media="(min-width: 36.3125rem)" srcset="/_assets/img/logos/logo_creativitea_l.png 1x, /_assets/img/logos/logo_creativitea_l@2x.png 1.5x">
-      <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 1.5x" alt="Creativitea, your daily cup of inspiration">
+      <source media="(min-width: 581px)" srcset="/_assets/img/logos/logo_creativitea_l.png 1x, /_assets/img/logos/logo_creativitea_l@2x.png 2x">
+      <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 2x" alt="Creativitea, your daily cup of inspiration">
     </picture>
   </a>
 
@@ -22,12 +22,12 @@
   <nav class="js-nav-bar nav-bar">
     <div class="nav-bar-wrapper wrapper clearfix">
       <a href="/" class="nav-bar-logo js-nav-bar-logo">
-        <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 1.5x" alt="Creativitea">
+        <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 2x" alt="Creativitea">
       </a>
       <ul class="main-nav-list">
         <li><a href="/">latest</a></li>
         <li><a href="#">discover</a></li>
-        <li><a href="#">search</a></li>
+        <li><a href="#search" class="js-search-toggle">search</a></li>
       </ul>
       <ul class="secondary-nav-list">
         <li><a href="#">about</a></li>
@@ -41,16 +41,26 @@
       </a>
     </div>
   </nav>
+  <div class="js-search-bar search-bar">
+    <div class="wrapper wrapper-padding">
+      <label class="hide" for="search-input">Search:</label>
+
+      <div class="input-addon-wrapper">
+        <input type="search" id="search-input" class="js-search-input input-addon-field search-input">
+        <button class="search-input-btn">Search</button>
+      </div>
+    </div>
+  </div>
 </header>
     <div class="content">
       <article class="featured-article article">
         <div class="featured-content">
           <figure class="post-list-item-figure">
             <picture>
-              <source media="(min-width: 52.5625rem)" srcset="/_assets/img/featured_items_covers/featured_img_02_xl.jpg 1x, /_assets/img/featured_items_covers/featured_img_02_xl@2x.jpg 1.5x">
-              <source media="(min-width: 36.3125rem)" srcset="/_assets/img/featured_items_covers/featured_img_02_l.jpg 1x, /_assets/img/featured_items_covers/featured_img_02_l@2x.jpg 1.5x">
-              <source media="(min-width: 26.3125rem)" srcset="/_assets/img/featured_items_covers/featured_img_02_m.jpg 1x, /_assets/img/featured_items_covers/featured_img_02_m@2x.jpg 1.5x">
-              <img src="/_assets/img/featured_items_covers/featured_img_02_s.jpg" srcset="/_assets/img/featured_items_covers/featured_img_02_s@2x.jpg 1.5x" alt="featured item 02">
+              <source media="(min-width: 841px)" srcset="/_assets/img/featured_items_covers/featured_img_02_xl.jpg 1x, /_assets/img/featured_items_covers/featured_img_02_xl@2x.jpg 2x">
+              <source media="(min-width: 581px)" srcset="/_assets/img/featured_items_covers/featured_img_02_l.jpg 1x, /_assets/img/featured_items_covers/featured_img_02_l@2x.jpg 2x">
+              <source media="(min-width: 421px)" srcset="/_assets/img/featured_items_covers/featured_img_02_m.jpg 1x, /_assets/img/featured_items_covers/featured_img_02_m@2x.jpg 2x">
+              <img src="/_assets/img/featured_items_covers/featured_img_02_s.jpg" srcset="/_assets/img/featured_items_covers/featured_img_02_s@2x.jpg 2x" alt="featured item 02">
             </picture>
           </figure>
         </div>
@@ -99,7 +109,9 @@
           <div class="covers">
             <article class="post-list-item">
               <figure class="post-list-item-figure">
-                <img src="/_assets/img/post_items_covers/cover_img_13.jpg" srcset="/_assets/img/post_items_covers/cover_img_13@2x.jpg 1.5x" alt="post item 13">
+                <a class="post-list-item-link" href="article.html">
+                  <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_13.jpg" srcset="/_assets/img/post_items_covers/cover_img_13@2x.jpg 2x" alt="post item 13">
+                </a>
                 <figcaption class="post-list-item-caption">
                   <h2 class="post-list-item-title"><a href="#">LEHA - Branding</a></h2>
                   <span class="post-list-item-by">by</span>
@@ -113,7 +125,9 @@
             </article>
             <article class="post-list-item">
               <figure class="post-list-item-figure">
-                <img src="/_assets/img/post_items_covers/cover_img_14.jpg" srcset="/_assets/img/post_items_covers/cover_img_14@2x.jpg 1.5x" alt="post item 14">
+                <a class="post-list-item-link" href="article.html">
+                  <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_14.jpg" srcset="/_assets/img/post_items_covers/cover_img_14@2x.jpg 2x" alt="post item 14">
+                </a>
                 <figcaption class="post-list-item-caption">
                   <h2 class="post-list-item-title"><a href="#">Alameda&rsquo;s New Leaf Music Video</a></h2>
                   <span class="post-list-item-by">by</span>
@@ -126,7 +140,9 @@
             </article>
             <article class="post-list-item">
               <figure class="post-list-item-figure">
-                <img src="/_assets/img/post_items_covers/cover_img_15.jpg" srcset="/_assets/img/post_items_covers/cover_img_15@2x.jpg 1.5x" alt="post item 15">
+                <a class="post-list-item-link" href="article.html">
+                  <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_15.jpg" srcset="/_assets/img/post_items_covers/cover_img_15@2x.jpg 2x" alt="post item 15">
+                </a>
                 <figcaption class="post-list-item-caption">
                   <h2 class="post-list-item-title"><a href="#">F&oslash;hr</a></h2>
                   <span class="post-list-item-by">by</span>
@@ -139,7 +155,9 @@
             </article>
             <article class="post-list-item">
               <figure class="post-list-item-figure">
-                <img src="/_assets/img/post_items_covers/cover_img_16.jpg" srcset="/_assets/img/post_items_covers/cover_img_16@2x.jpg 1.5x" alt="post item 16">
+                <a class="post-list-item-link" href="article.html">
+                  <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_16.jpg" srcset="/_assets/img/post_items_covers/cover_img_16@2x.jpg 2x" alt="post item 16">
+                </a>
                 <figcaption class="post-list-item-caption">
                   <h2 class="post-list-item-title"><a href="#">F&oslash;hr</a></h2>
                   <span class="post-list-item-by">by</span>
@@ -157,6 +175,6 @@
     <footer>
   <!--<p>&copy; Creativitea &mdash; <a href="http://www.ruudvoost.com/" target="_blank">Ruud Voost</a> &amp; <a href="http://schmerzwelt.com/" target="_blank">Robin Berkelmans</a></p>-->
 </footer>
-    <script src="_assets/js/main.min.js"></script>
+    <script src="/_assets/js/main.min.js?rel=@@timestamp"></script>
   </body>
 </html>

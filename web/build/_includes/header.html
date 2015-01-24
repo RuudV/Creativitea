@@ -1,8 +1,8 @@
 <header class="site-header">
-  <a href="/" class="logo">
+  <a href="/" class="js-logo logo">
     <picture>
-      <source media="(min-width: 36.3125rem)" srcset="/_assets/img/logos/logo_creativitea_l.png 1x, /_assets/img/logos/logo_creativitea_l@2x.png 1.5x">
-      <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 1.5x" alt="Creativitea, your daily cup of inspiration">
+      <source media="(min-width: 581px)" srcset="/_assets/img/logos/logo_creativitea_l.png 1x, /_assets/img/logos/logo_creativitea_l@2x.png 2x">
+      <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 2x" alt="Creativitea, your daily cup of inspiration">
     </picture>
   </a>
 
@@ -11,12 +11,12 @@
   <nav class="js-nav-bar nav-bar">
     <div class="nav-bar-wrapper wrapper clearfix">
       <a href="/" class="nav-bar-logo js-nav-bar-logo">
-        <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 1.5x" alt="Creativitea">
+        <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 2x" alt="Creativitea">
       </a>
       <ul class="main-nav-list">
         <li><a href="/">latest</a></li>
         <li><a href="#">discover</a></li>
-        <li><a href="#">search</a></li>
+        <li><a href="#search" class="js-search-toggle">search</a></li>
       </ul>
       <ul class="secondary-nav-list">
         <li><a href="#">about</a></li>
@@ -30,4 +30,14 @@
       </a>
     </div>
   </nav>
+  <div class="js-search-bar search-bar">
+    <div class="wrapper wrapper-padding">
+      <label class="hide" for="search-input">Search:</label>
+
+      <div class="input-addon-wrapper">
+        <input type="search" id="search-input" class="js-search-input input-addon-field search-input">
+        <button class="search-input-btn">Search</button>
+      </div>
+    </div>
+  </div>
 </header>

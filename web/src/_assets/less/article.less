@@ -27,6 +27,15 @@ hr {
   margin: 0 auto 64px;
 }
 
+.article-artists > a {
+  white-space: nowrap;
+
+  &:not(:first-child):nth-child(odd)::before {
+    content: '\A';
+    white-space: pre;
+  }
+}
+
 .article-title-by {
   display: block;
   margin: .5rem 0;
