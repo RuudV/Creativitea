@@ -1,6 +1,30 @@
 // Vars for Scaffolding
 @bodyBg: #fff;
 
+/** {
+  background: rgba(255, 255, 0, .15);
+}
+
+* * {
+  background: rgba(255, 255, 0, .15);
+}
+
+* * * {
+  background: rgba(255, 255, 0, .15);
+}
+
+* * * * {
+  background: rgba(255, 255, 0, .15);
+}
+
+* * * * * {
+  background: rgba(255, 255, 0, .15);
+}
+
+* * * * * * {
+  background: rgba(255, 255, 0, .15);
+}*/
+
 // prevent items with transition property from transitioning when the dom is loading
 // javascript removes the preload class to enable transitions after the dom is loaded
 .preload * {
@@ -50,8 +74,15 @@ img {
 
 body {
   background: @bodyBg;
+
   &.disable-hover-js {
     pointer-events: none;
+  }
+
+  &.disable-scroll-js {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
   }
 }
 

@@ -1,8 +1,25 @@
 /*
  * Helper Functions
  * */
-chelper = function () {
+ch = function () {
   'use strict';
+
+  // the call back for each loop
+  function forEach(list, callback) {
+    if (list !== undefined) {
+      [].forEach.call(list, callback);
+    }
+    return false;
+  }
+
+  // add handler space seperated
+  function addHandlers(eventsString, element, callback) {
+    var events = eventsString.split(' ');
+    for (var i = 0; i < events.length; i++) {
+      element.addEventListener(events[i], callback);
+    }
+  }
+
   // get first element by a specific class
   function getElementByClass(elementClass) {
     return document.querySelectorAll(elementClass)[0];
@@ -20,6 +37,9 @@ chelper = function () {
 
   // publicize helper functions
   return {
+    forEach: function (list, callback) {
+      forEach(list, callback);
+    },
     getElementByClass: function (elementClass) {
       return getElementByClass(elementClass);
     },
@@ -28,6 +48,9 @@ chelper = function () {
     },
     hasClass: function (element, className) {
       return hasClass(element, className);
+    },
+    addHandlers: function (eventsString, element, callback) {
+      addHandlers(eventsString, element, callback);
     }
   };
 };

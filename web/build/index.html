@@ -6,7 +6,7 @@
     <meta name="description" content="Creativitea is your daily cup of inspiration for graphic design, illustration, photography, web/interface design and many more creative fields">
     <meta name="author" content="Creativitea">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="_assets/css/styles.min.css?rel=@@timestamp">
+    <link rel="stylesheet" href="/_assets/css/styles.min.css?rel=@@timestamp">
     <script>
       // Picture element HTML5 shiv
       document.createElement("picture");
@@ -36,7 +36,7 @@
       <ul class="secondary-nav-list">
         <li><a href="#">about</a></li>
         <li><a href="#">advertise</a></li>
-        <li><a href="#">submit</a></li>
+        <li><a href="#submit" class="js-submit-toggle">submit</a></li>
       </ul>
       <a href="/" class="secondary-nav-list-toggle js-secondary-nav-list-toggle">
         <span></span>
@@ -45,18 +45,20 @@
       </a>
     </div>
   </nav>
-  <div class="js-search-bar search-bar">
-    <div class="wrapper wrapper-padding">
-      <label class="hide" for="search-input">Search:</label>
 
-      <div class="input-addon-wrapper">
-        <input type="search" id="search-input" class="js-search-input input-addon-field search-input">
-        <button class="search-input-btn">Search</button>
-      </div>
+  <div class="js-search-bar search-bar">
+  <div class="wrapper wrapper-padding">
+    <label class="hide" for="search-input">Search:</label>
+
+    <div class="input-addon-wrapper">
+      <input type="search" id="search-input" class="js-search-input input input-addon-field search-input">
+      <button class="search-input-button input input-button">Search</button>
     </div>
   </div>
+</div>
 </header>
     <div class="content">
+      <!-- Featured Content -->
       <div class="featured-content">
         <article class="post-list-item">
           <figure class="post-list-item-figure">
@@ -69,15 +71,18 @@
               </picture>
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/featured-article.html">Sky Cleaner!</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="#">Bakea</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/featured-article.html">Sky Cleaner!</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="#">Bakea</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories"><a href="#">Illustration</a></div>
         </article>
       </div>
+      <!-- END Featured Content -->
+      <!-- Covers -->
       <div class="covers">
         <article class="post-list-item">
           <figure class="post-list-item-figure">
@@ -85,12 +90,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_01.jpg" srcset="/_assets/img/post_items_covers/cover_img_01@2x.jpg 2x" alt="post item 01">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">LEHA - Branding</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author">
-                <a href="/artist/artist-page.html">Multiple artists</a>
-              </div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">LEHA - Branding</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Multiple artists</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -105,10 +109,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_02.jpg" srcset="/_assets/img/post_items_covers/cover_img_02@2x.jpg 2x" alt="post item 02">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Legwork Studio</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -123,10 +128,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_03.jpg" srcset="/_assets/img/post_items_covers/cover_img_03@2x.jpg 2x" alt="post item 03">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">F&oslash;hr</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Alexey Masalov</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -141,10 +147,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_04.jpg" srcset="/_assets/img/post_items_covers/cover_img_04@2x.jpg 2x" alt="post item 04">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">F&oslash;hr</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Alexey Masalov</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -159,10 +166,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_05.jpg" srcset="/_assets/img/post_items_covers/cover_img_05@2x.jpg 2x" alt="post item 05">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">F&oslash;hr</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Alexey Masalov</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -177,10 +185,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_06.jpg" srcset="/_assets/img/post_items_covers/cover_img_06@2x.jpg 2x" alt="post item 06">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">F&oslash;hr</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Alexey Masalov</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -195,10 +204,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_07.jpg" srcset="/_assets/img/post_items_covers/cover_img_07@2x.jpg 2x" alt="post item 07">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Legwork Studio</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -213,10 +223,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_08.jpg" srcset="/_assets/img/post_items_covers/cover_img_08@2x.jpg 2x" alt="post item 08">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">F&oslash;hr</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Alexey Masalov</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -231,10 +242,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_09.jpg" srcset="/_assets/img/post_items_covers/cover_img_09@2x.jpg 2x" alt="post item 09">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Legwork Studio</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -249,10 +261,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_10.jpg" srcset="/_assets/img/post_items_covers/cover_img_10@2x.jpg 2x" alt="post item 10">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Legwork Studio</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -267,10 +280,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_11.jpg" srcset="/_assets/img/post_items_covers/cover_img_11@2x.jpg 2x" alt="post item 11">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">F&oslash;hr</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Alexey Masalov</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -285,10 +299,11 @@
               <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_12.jpg" srcset="/_assets/img/post_items_covers/cover_img_12@2x.jpg 2x" alt="post item 12">
             </a>
             <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
+              <h2 class="post-list-item-title">
+                <a href="/article.html">F&oslash;hr</a>
+                <span class="post-list-item-by">by</span>
+                <a class="post-list-item-author" href="/artist/artist-page.html">Alexey Masalov</a>
+              </h2>
             </figcaption>
           </figure>
           <div class="post-list-item-categories">
@@ -298,890 +313,49 @@
           </div>
         </article>
       </div>
-      <div class="covers">
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_01.jpg" srcset="/_assets/img/post_items_covers/cover_img_01@2x.jpg 2x" alt="post item 01">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">LEHA - Branding</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author">
-                <a href="/artist/artist-page.html">Multiple artists</a>
-              </div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Branding</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Photography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_02.jpg" srcset="/_assets/img/post_items_covers/cover_img_02@2x.jpg 2x" alt="post item 02">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_03.jpg" srcset="/_assets/img/post_items_covers/cover_img_03@2x.jpg 2x" alt="post item 03">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_04.jpg" srcset="/_assets/img/post_items_covers/cover_img_04@2x.jpg 2x" alt="post item 04">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_05.jpg" srcset="/_assets/img/post_items_covers/cover_img_05@2x.jpg 2x" alt="post item 05">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_06.jpg" srcset="/_assets/img/post_items_covers/cover_img_06@2x.jpg 2x" alt="post item 06">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_07.jpg" srcset="/_assets/img/post_items_covers/cover_img_07@2x.jpg 2x" alt="post item 07">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_08.jpg" srcset="/_assets/img/post_items_covers/cover_img_08@2x.jpg 2x" alt="post item 08">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_09.jpg" srcset="/_assets/img/post_items_covers/cover_img_09@2x.jpg 2x" alt="post item 09">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_10.jpg" srcset="/_assets/img/post_items_covers/cover_img_10@2x.jpg 2x" alt="post item 10">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_11.jpg" srcset="/_assets/img/post_items_covers/cover_img_11@2x.jpg 2x" alt="post item 11">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_12.jpg" srcset="/_assets/img/post_items_covers/cover_img_12@2x.jpg 2x" alt="post item 12">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-      </div>
-      <div class="covers">
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_01.jpg" srcset="/_assets/img/post_items_covers/cover_img_01@2x.jpg 2x" alt="post item 01">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">LEHA - Branding</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author">
-                <a href="/artist/artist-page.html">Multiple artists</a>
-              </div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Branding</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Photography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_02.jpg" srcset="/_assets/img/post_items_covers/cover_img_02@2x.jpg 2x" alt="post item 02">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_03.jpg" srcset="/_assets/img/post_items_covers/cover_img_03@2x.jpg 2x" alt="post item 03">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_04.jpg" srcset="/_assets/img/post_items_covers/cover_img_04@2x.jpg 2x" alt="post item 04">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_05.jpg" srcset="/_assets/img/post_items_covers/cover_img_05@2x.jpg 2x" alt="post item 05">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_06.jpg" srcset="/_assets/img/post_items_covers/cover_img_06@2x.jpg 2x" alt="post item 06">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_07.jpg" srcset="/_assets/img/post_items_covers/cover_img_07@2x.jpg 2x" alt="post item 07">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_08.jpg" srcset="/_assets/img/post_items_covers/cover_img_08@2x.jpg 2x" alt="post item 08">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_09.jpg" srcset="/_assets/img/post_items_covers/cover_img_09@2x.jpg 2x" alt="post item 09">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_10.jpg" srcset="/_assets/img/post_items_covers/cover_img_10@2x.jpg 2x" alt="post item 10">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_11.jpg" srcset="/_assets/img/post_items_covers/cover_img_11@2x.jpg 2x" alt="post item 11">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_12.jpg" srcset="/_assets/img/post_items_covers/cover_img_12@2x.jpg 2x" alt="post item 12">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-      </div>
-      <div class="covers">
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_01.jpg" srcset="/_assets/img/post_items_covers/cover_img_01@2x.jpg 2x" alt="post item 01">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">LEHA - Branding</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author">
-                <a href="/artist/artist-page.html">Multiple artists</a>
-              </div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Branding</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Photography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_02.jpg" srcset="/_assets/img/post_items_covers/cover_img_02@2x.jpg 2x" alt="post item 02">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_03.jpg" srcset="/_assets/img/post_items_covers/cover_img_03@2x.jpg 2x" alt="post item 03">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_04.jpg" srcset="/_assets/img/post_items_covers/cover_img_04@2x.jpg 2x" alt="post item 04">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_05.jpg" srcset="/_assets/img/post_items_covers/cover_img_05@2x.jpg 2x" alt="post item 05">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_06.jpg" srcset="/_assets/img/post_items_covers/cover_img_06@2x.jpg 2x" alt="post item 06">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_07.jpg" srcset="/_assets/img/post_items_covers/cover_img_07@2x.jpg 2x" alt="post item 07">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_08.jpg" srcset="/_assets/img/post_items_covers/cover_img_08@2x.jpg 2x" alt="post item 08">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_09.jpg" srcset="/_assets/img/post_items_covers/cover_img_09@2x.jpg 2x" alt="post item 09">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_10.jpg" srcset="/_assets/img/post_items_covers/cover_img_10@2x.jpg 2x" alt="post item 10">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_11.jpg" srcset="/_assets/img/post_items_covers/cover_img_11@2x.jpg 2x" alt="post item 11">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_12.jpg" srcset="/_assets/img/post_items_covers/cover_img_12@2x.jpg 2x" alt="post item 12">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-      </div>
-      <div class="covers">
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_01.jpg" srcset="/_assets/img/post_items_covers/cover_img_01@2x.jpg 2x" alt="post item 01">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">LEHA - Branding</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author">
-                <a href="/artist/artist-page.html">Multiple artists</a>
-              </div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Branding</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Photography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_02.jpg" srcset="/_assets/img/post_items_covers/cover_img_02@2x.jpg 2x" alt="post item 02">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_03.jpg" srcset="/_assets/img/post_items_covers/cover_img_03@2x.jpg 2x" alt="post item 03">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_04.jpg" srcset="/_assets/img/post_items_covers/cover_img_04@2x.jpg 2x" alt="post item 04">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_05.jpg" srcset="/_assets/img/post_items_covers/cover_img_05@2x.jpg 2x" alt="post item 05">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_06.jpg" srcset="/_assets/img/post_items_covers/cover_img_06@2x.jpg 2x" alt="post item 06">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_07.jpg" srcset="/_assets/img/post_items_covers/cover_img_07@2x.jpg 2x" alt="post item 07">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_08.jpg" srcset="/_assets/img/post_items_covers/cover_img_08@2x.jpg 2x" alt="post item 08">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_09.jpg" srcset="/_assets/img/post_items_covers/cover_img_09@2x.jpg 2x" alt="post item 09">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_10.jpg" srcset="/_assets/img/post_items_covers/cover_img_10@2x.jpg 2x" alt="post item 10">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">Alameda&rsquo;s New Leaf Music Video</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Legwork Studio</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_11.jpg" srcset="/_assets/img/post_items_covers/cover_img_11@2x.jpg 2x" alt="post item 11">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-        <article class="post-list-item">
-          <figure class="post-list-item-figure">
-            <a class="post-list-item-img-link" href="/article.html">
-              <img class="post-list-item-img" src="/_assets/img/post_items_covers/cover_img_12.jpg" srcset="/_assets/img/post_items_covers/cover_img_12@2x.jpg 2x" alt="post item 12">
-            </a>
-            <figcaption class="post-list-item-caption">
-              <h2 class="post-list-item-title"><a href="/article.html">F&oslash;hr</a></h2>
-              <span class="post-list-item-by">by</span>
-
-              <div class="post-list-item-author"><a href="/artist/artist-page.html">Alexey Masalov</a></div>
-            </figcaption>
-          </figure>
-          <div class="post-list-item-categories">
-            <a href="/categories/illustration.html">Illustration</a>,
-            <a href="/categories/illustration.html">Graphic Design</a>,
-            <a href="/categories/illustration.html">Typography</a>
-          </div>
-        </article>
-      </div>
+      <!-- END Covers -->
     </div>
-    <footer>
-  <!--<p>&copy; Creativitea &mdash; <a href="http://www.ruudvoost.com/" target="_blank">Ruud Voost</a> &amp; <a href="http://schmerzwelt.com/" target="_blank">Robin Berkelmans</a></p>-->
+    <footer class="footer">
+  <div class="wrapper">
+    <h3 class="text-center">Stay up to date</h3>
+
+    <div class="up-to-date-wrapper">
+      <a class="button button-toned" href="">Follow us on Facebook</a>
+      <a class="button button-toned" href="">Creativitea on Pinterest</a>
+      <a class="button button-toned" href="">Receive updates via Twitter</a>
+      <a class="button button-toned" href="">Subscribe to our RSS feed</a>
+    </div>
+  </div>
 </footer>
+
+<!-- Modals // Make sure this stand on it's own line, otherwise the whole line gets replaced with the include -->
+<div class="js-submit-form-wrapper submit-form-wrapper">
+  <section class="js-submit-form-container submit-form-container">
+    <h3>Mention awesomeness</h3>
+
+    <form action="#" id="submit-form" class="js-submit-form">
+      <!-- Artist(s) -->
+      <span class="input-wrapper">
+        <input class="js-input input" id="submit-artist" type="text" required>
+        <label class="input-label" for="submit-artist"><span class="input-label-content">Artist(s)</span></label>
+      </span>
+      <!-- URL -->
+      <span class="input-wrapper">
+        <input class="js-input input" id="submit-url" type="url" required>
+        <label class="input-label" for="submit-url"><span class="input-label-content">URL</span></label>
+      </span>
+      <!-- Remarks -->
+      <span class="input-wrapper">
+        <textarea class="js-input input input-text-area js-input-text-area" name="submit-remarks" id="submit-remarks" data-resizable="true" rows="1"></textarea>
+        <label class="input-label" for="submit-remarks"><span class="input-label-content">Remarks &amp; notes</span></label>
+      </span>
+      <!-- Submit Button -->
+      <input class="input input-button js-submit-button" type="button" value="Submit">
+      <!-- Close Button -->
+      <button class="input input-button close-button js-close-submit-form">Close</button>
+    </form>
+  </section>
+</div>
     <script src="/_assets/js/main.min.js?rel=@@timestamp"></script>
   </body>
 </html>

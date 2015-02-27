@@ -1,38 +1,135 @@
-// Form and input styles
-
-// Resets + Base Styling
-input[type=search] {
-  -webkit-appearance: none;
-  border: none;
-
-  font-size: 1rem;
-  font-family: 'Merriweather Sans';
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  text-indent: .75rem;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-}
-
-button {
+.input-wrapper {
+  max-width: 25rem;
+  overflow: hidden;
+  position: relative;
   display: block;
-  border: none;
-  padding: 0;
+}
 
-  cursor: pointer;
+.input,
+.button {
+  border: none;
+  height: 3rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-block;
+}
+
+.input {
+  -webkit-appearance: none;
+  width: 100%;
+  outline: none;
+  display: block;
 
   &:focus {
     outline: 0;
   }
+
+  &:focus,
+  &.input-not-empty-js {
+    & + .input-label {
+      .input-label-content {
+        transform: translate3d(0, -2rem, 0);
+      }
+
+      &::before,
+      &::after {
+        transform: translate3d(100%, 0, 0);
+      }
+    }
+  }
+
+  &[type=search] {
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.input,
+.input-label,
+.button {
+  padding: 0 .375rem;
+}
+
+.input-label {
+  &::after,
+  &::before {
+    content: " ";
+
+    display: block;
+    height: 0;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    border-top: .125rem solid fade(@baseFont, 20%);
+
+    transition: transform .3s ease-in-out;
+  }
+
+  &::before {
+    border-top: .125rem solid @baseFont;
+    left: -100%;
+  }
+}
+
+.input-label,
+.input-label-content {
+  position: absolute;
+  width: 100%;
+}
+
+.input-label {
+  left: 0;
+  top: 2rem;
+  height: ~'calc(100% - 2rem)';
+
+  transition: all .3s ease-in-out;
+}
+
+.input-label-content {
+  transition: transform .1s ease-in-out;
+  top: 0;
+}
+
+.input-text-area {
+  resize: none;
+  overflow: hidden;
+  padding: .75rem .375rem;
+}
+
+.input-button,
+.button {
+  cursor: pointer;
+
+  background: @baseFont;
+  border: 1px solid @baseFont;
+
+  &:active {
+    border: 1px solid @baseFont;
+    background: #fff;
+  }
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+
+  &:active {
+    border: none;
+  }
+}
+
+.button-toned {
+  background: fade(@baseFont, 30%);
+  border: 1px solid transparent;
 }
 
 .input-addon-wrapper {
@@ -56,18 +153,20 @@ button {
 }
 
 .search-input {
-  height: 40px;
+  height: 2.5rem;
+  margin: 0;
   background: lighten(@baseFont, 10%);
-
-  color: lighten(@baseFont, 90%);
 }
 
-.search-input-btn {
+.search-input-button {
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
   color: transparent;
   background: lighten(@baseFont, 10%);
+
+  margin: 0;
+  border: none;
 
   &::before,
   &::after {
@@ -100,14 +199,46 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  background: fade(@baseFont, 50%);
+  padding: .75rem;
+  background: fade(@baseFont, 20%);
+
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  visibility: hidden;
+
+  &.submit-form-wrapper-visible-js {
+    visibility: visible;
+  }
 }
 
 .submit-form-container {
   width: 100%;
-  max-width: 20rem;
+  max-width: 26.5rem;
   background: #fff;
-  min-height: 20rem;
+  padding: .75rem;
+  margin: 0 auto;
+
+  transform: translate3d(0, -2rem, 0);
+  opacity: 0;
+
+  transition: all .3s ease-in-out;
+
+  .submit-form-wrapper-visible-js & {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 36.3125rem) {
+  .submit-form-wrapper {
+    padding: 4.5rem;
+  }
+
+  .submit-form-container {
+    max-width: 28rem;
+    padding: 1.5rem;
+  }
 }
 
 

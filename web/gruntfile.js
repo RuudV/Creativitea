@@ -250,6 +250,7 @@ module.exports = function (grunt) {
           'clean:watchHtml',
           'copy:watchHtml',
           'processhtml:dev',
+          'replace:dev',
           'validation:dev'
         ]
       }
@@ -275,8 +276,8 @@ module.exports = function (grunt) {
   /*
    Declare tasks
    */
-  //Default task // cmd: grunt
-  // NOTE: grunt.registerTask('default') - Don't use this atm, not ready
+  // Default task // cmd: grunt
+  // TODO: grunt.registerTask('default') - Don't use this atm, not ready
   // TODO: grunt.registerTask('default') - Let default grunt task run a build and dev build
   grunt.registerTask('default', [
     'jshint',
@@ -297,7 +298,7 @@ module.exports = function (grunt) {
     'jshint'
   ]);
 
-  // Dev task //cmd: grunt dev
+  // Dev task // cmd: grunt dev
   grunt.registerTask('dev', [
     'jshint',
     'clean:dev',
