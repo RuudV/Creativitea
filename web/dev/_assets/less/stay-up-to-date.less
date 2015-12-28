@@ -1,0 +1,30 @@
+/* Stay Up To Date Styles */
+
+/*
+Default Styling
+*/
+.up-to-date-wrapper {
+  margin: 6rem auto;
+}
+
+.up-to-date-channels-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-channel {
+  width: 100/3%;
+}
+
+.social-text {
+  border-bottom: none;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, fade(@baseFont, 10%) 50%);
+  background-position: -0% 0;
+  background-size: 200% auto;
+
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background-position: -100% 0;
+  }
+}

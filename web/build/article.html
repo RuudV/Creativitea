@@ -10,48 +10,49 @@
   </head>
   <body class="preload">
     <header class="site-header">
-      <a href="/" class="js-logo logo">
-        <picture>
-          <source media="(min-width: 581px)" srcset="/_assets/img/logos/logo_creativitea_l.png 1x, /_assets/img/logos/logo_creativitea_l@2x.png 2x">
-          <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 2x" alt="Creativitea, your daily cup of inspiration">
-        </picture>
+  <a href="/" class="js-logo logo">
+    <picture>
+      <source media="(min-width: 581px)" srcset="/_assets/img/logos/logo_creativitea_l.png 1x, /_assets/img/logos/logo_creativitea_l@2x.png 2x">
+      <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 2x" alt="Creativitea, your daily cup of inspiration">
+    </picture>
+  </a>
+
+  <h1 class="hide">Creativitea</h1>
+  <span class="hide">Your daily cup of insipiration</span>
+  <nav class="js-nav-bar nav-bar">
+    <div class="nav-bar-wrapper wrapper clearfix">
+      <a href="/" class="nav-bar-logo js-nav-bar-logo">
+        <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 2x" alt="Creativitea">
       </a>
+      <ul class="main-nav-list">
+        <li><a href="/">latest</a></li>
+        <li><a href="#">discover</a></li>
+        <li><a href="#search" class="js-search-toggle">search</a></li>
+      </ul>
+      <ul class="secondary-nav-list">
+        <li><a href="#">about</a></li>
+        <li><a href="#">advertise</a></li>
+        <li><a href="#submit" class="js-submit-toggle">submit</a></li>
+      </ul>
+      <a href="/" class="secondary-nav-list-toggle js-secondary-nav-list-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+  </nav>
 
-      <h1 class="hide">Creativitea</h1>
-      <span class="hide">Your daily cup of insipiration</span>
-      <nav class="js-nav-bar nav-bar">
-        <div class="nav-bar-wrapper wrapper clearfix">
-          <a href="/" class="nav-bar-logo js-nav-bar-logo">
-            <img src="/_assets/img/logos/logo_creativitea_s.png" srcset="/_assets/img/logos/logo_creativitea_s@2x.png 2x" alt="Creativitea">
-          </a>
-          <ul class="main-nav-list">
-            <li><a href="/">latest</a></li>
-            <li><a href="#">discover</a></li>
-            <li><a href="#search" class="js-search-toggle">search</a></li>
-          </ul>
-          <ul class="secondary-nav-list">
-            <li><a href="#">about</a></li>
-            <li><a href="#">advertise</a></li>
-            <li><a href="#submit" class="js-submit-toggle">submit</a></li>
-          </ul>
-          <a href="/" class="secondary-nav-list-toggle js-secondary-nav-list-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
-        </div>
-      </nav>
-      <div class="js-search-bar search-bar">
-        <div class="wrapper wrapper-padding">
-          <label class="hide" for="search-input">Search:</label>
+  <div class="js-search-bar search-bar">
+  <div class="wrapper wrapper-padding">
+    <label class="hide" for="search-input">Search:</label>
 
-          <div class="input-addon-wrapper">
-            <input type="search" id="search-input" class="js-search-input input input-addon-field search-input">
-            <button class="search-input-button input input-button">Search</button>
-          </div>
-        </div>
-      </div>
-    </header>
+    <div class="input-addon-wrapper">
+      <input type="search" id="search-input" class="js-search-input input input-addon-field search-input">
+      <button class="search-input-button input input-button">Search</button>
+    </div>
+  </div>
+</div>
+</header>
     <div class="content">
       <article class="article">
         <!-- Article Main Image -->
@@ -94,7 +95,6 @@
           <a href="mailto:" class="social-icon social-icon-email"><img src="/_assets/img/icons/icon_social_email.png" srcset="/_assets/img/icons/icon_social_email@2x.png 2x" alt="Mail to your Friends!"></a>
         </div>
         <!-- End Social -->
-        <hr class="hr">
         <!-- Article Footer -->
         <footer class="article-footer">
           <p class="post-author">Posted by <a href="#">Ruud Voost</a></p>
@@ -184,46 +184,53 @@
       </aside>
       <!-- END Article Related Posts -->
     </div>
+    <div class="up-to-date-wrapper wrapper">
+  <h3 class="text-center">Stay up to date</h3>
+
+  <div class="up-to-date-channels-wrapper">
+    <div class="social-channel">
+      <a class="social-text social-text-facebook" href="https://www.facebook.com/creativiteaorg">Facebook (5,393 likes)</a>
+    </div>
+    <div class="social-channel">
+      <a class="social-text social-text-pinterest" href="https://www.pinterest.com/creativiteaorg">Pinterest (815 followers)</a>
+    </div>
+    <div class="social-channel">
+      <a class="social-text social-text-rss" href="http://feeds.feedburner.com/creativitea/seWz">RSS feed (146 subscribers)</a>
+    </div>
+  </div>
+</div>
+
     <footer class="footer">
-      <div class="wrapper">
-        <h3 class="text-center">Stay up to date</h3>
+</footer>
 
-        <div class="up-to-date-wrapper">
-          <a class="button button-toned" href="">Follow us on Facebook</a>
-          <a class="button button-toned" href="">Creativitea on Pinterest</a>
-          <a class="button button-toned" href="">Receive updates via Twitter</a>
-          <a class="button button-toned" href="">Subscribe to our RSS feed</a>
-        </div>
-      </div>
-    </footer>
-    <!-- Modals // Make sure this stand on it's own line, otherwise the whole line gets replaced with the include -->
-    <div class="js-submit-form-wrapper submit-form-wrapper">
-      <section class="js-submit-form-container submit-form-container">
-        <h3>Mention awesomeness</h3>
+<!-- Modals // Make sure this stand on it's own line, otherwise the whole line gets replaced with the include -->
+<div class="js-submit-form-wrapper submit-form-wrapper">
+  <section class="js-submit-form-container submit-form-container">
+    <h3>Mention awesomeness</h3>
 
-        <form action="#" id="submit-form" class="js-submit-form">
-          <!-- Artist(s) -->
+    <form action="#" id="submit-form" class="js-submit-form">
+      <!-- Artist(s) -->
       <span class="input-wrapper">
         <input class="js-input input" id="submit-artist" type="text" required>
         <label class="input-label" for="submit-artist"><span class="input-label-content">Artist(s)</span></label>
       </span>
-          <!-- URL -->
+      <!-- URL -->
       <span class="input-wrapper">
         <input class="js-input input" id="submit-url" type="url" required>
         <label class="input-label" for="submit-url"><span class="input-label-content">URL</span></label>
       </span>
-          <!-- Remarks -->
+      <!-- Remarks -->
       <span class="input-wrapper">
         <textarea class="js-input input input-text-area js-input-text-area" name="submit-remarks" id="submit-remarks" data-resizable="true" rows="1"></textarea>
         <label class="input-label" for="submit-remarks"><span class="input-label-content">Remarks &amp; notes</span></label>
       </span>
-          <!-- Submit Button -->
-          <input class="input input-button js-submit-button" type="button" value="Submit">
-          <!-- Close Button -->
-          <button class="input input-button close-button js-close-submit-form">Close</button>
-        </form>
-      </section>
-    </div>
+      <!-- Submit Button -->
+      <input class="input input-button js-submit-button" type="button" value="Submit">
+      <!-- Close Button -->
+      <button class="input input-button close-button js-close-submit-form">Close</button>
+    </form>
+  </section>
+</div>
     <script src="/_assets/js/main.min.js?rel=@@timestamp"></script>
   </body>
 </html>

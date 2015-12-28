@@ -6,13 +6,6 @@
     margin: 64px auto;
     border-top: 1px solid fade(@baseFont, 20%);
   }
-  .article-header & {
-    margin: 32px auto;
-  }
-}
-
-.article {
-  margin-bottom: 4rem;
 }
 
 .article-header,
@@ -27,14 +20,20 @@
   margin: 2rem auto 4rem;
 }
 
+.article-footer {
+  margin-top: 2rem;
+}
+
 .article-title-by {
   display: block;
 }
 
 .article-related-posts {
-  padding: 64px 0;
-  background: #F8F9F9;
-  margin: 0 calc((-100vw - 100%) / 2);
+  margin: 6rem ~'calc((100vw - 100%) / -2)' 3rem;
+
+  + * {
+    margin-top: 0;
+  }
 }
 
 .article-related-posts-title {
@@ -63,7 +62,7 @@
 }
 
 .article-content > .figure-side-by-side > .article-img-left {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .social-icons {

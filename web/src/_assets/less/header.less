@@ -28,7 +28,7 @@ Less Styles for the header
   left: 0;
   right: 0;
   height: 40px;
-  background: #f9f9f9;
+  background: #fff;
 
   // reset margin
   margin-top: 0;
@@ -46,6 +46,10 @@ Less Styles for the header
   position: relative;
   height: 100%;
   overflow: hidden;
+
+  @media (min-width: 77rem) {
+    padding: 0;
+  }
 }
 
 .nav-bar-logo {
@@ -252,11 +256,5 @@ Maximum width of 36.25rem (580px)
 
   .secondary-nav-list-toggle {
     display: none;
-  }
-}
-
-@media (min-width: 77rem) {
-  .nav-bar-wrapper {
-    padding: 0;
   }
 }
